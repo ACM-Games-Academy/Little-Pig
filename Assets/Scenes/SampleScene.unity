@@ -250,11 +250,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcadb349d4cd5f34884d135162cfa51d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 963194228}
+  model: {fileID: 1402892502}
   walkSpeed: 4
   runSpeed: 6
   crouchSpeed: 2
   jumpHeight: 1.5
   gravity: -9.81
+  turnSmoothTime: 0.1
   standingHeight: 2
   crouchingHeight: 0.5
 --- !u!136 &766678120
