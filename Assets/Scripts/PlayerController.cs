@@ -40,7 +40,6 @@ public class PlayerController : MonoBehaviour
         HandleJump();
         ApplyGravity();
 
-        // Combine movement and gravity
         Vector3 finalMove = move * currentSpeed + new Vector3(0f, velocity.y, 0f);
         controller.Move(finalMove * Time.deltaTime);
 
