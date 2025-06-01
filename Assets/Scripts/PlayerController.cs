@@ -5,8 +5,8 @@ using System.IO;
 public class PlayerControllerRB : MonoBehaviour
 {
     [Header("References")]
-    public Transform cameraTransform;
-    public Transform model;
+    public Transform cameraTransform; // Reference to the camera for movement direction
+    public Transform model;           // Reference to the player model for visual rotation
 
     [Header("Movement")]
     public float walkSpeed = 4f;
@@ -29,11 +29,11 @@ public class PlayerControllerRB : MonoBehaviour
 
     private void Start()
     {
+        // Get required components
         rb = GetComponent<Rigidbody>();
         col = GetComponent<CapsuleCollider>();
-        Cursor.lockState = CursorLockMode.Locked;
 
-        // Start lying on side
+        // Start in crouched position and lying on the side
         model.localRotation = Quaternion.Euler(0f, 0f, 90f);
         col.height = crouchingHeight;
         col.center = new Vector3(0f, crouchingHeight / 2f, 0f);
@@ -41,8 +41,10 @@ public class PlayerControllerRB : MonoBehaviour
 
     private void Update()
     {
+        // Handle crouch state and animations
         HandleCrouch();
 
+        // Move player based on input and current speed
         Vector3 move = HandleMovement();
         Vector3 newPos = rb.position + move * currentSpeed * Time.deltaTime;
         rb.MovePosition(newPos);
@@ -50,16 +52,18 @@ public class PlayerControllerRB : MonoBehaviour
         ApplyGravity();
         HandleJump();
 
+        // Save/Load player position with F5/F9
         if (Input.GetKeyDown(KeyCode.F5)) SavePlayer();
         if (Input.GetKeyDown(KeyCode.F9)) LoadPlayer();
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        // Ground check
+        // Check if the player is grounded using a raycast
         isGrounded = Physics.Raycast(transform.position, Vector3.down, col.bounds.extents.y + 0.1f);
     }
 
+    // Handles directional movement based on input and camera orientation
     Vector3 HandleMovement()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
@@ -68,10 +72,12 @@ public class PlayerControllerRB : MonoBehaviour
 
         if (direction.magnitude >= 0.1f)
         {
+            // Calculate rotation angle based on input and camera
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
+            // Calculate movement direction relative to camera
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             return moveDir.normalized;
         }
@@ -83,20 +89,23 @@ public class PlayerControllerRB : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftControl))
         {
+            // Standing: taller collider and standing up model
             currentSpeed = crouchSpeed;
             col.height = crouchingHeight;
             col.center = new Vector3(0f, crouchingHeight / 2f, 0f);
-            model.localRotation = Quaternion.Euler(0f, 90f, 0f); // lying on side
+            model.localRotation = Quaternion.Euler(0f, 90f, 0f);
         }
         else
         {
+            // Crouching: smaller collider and lying down model
             currentSpeed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
             col.height = standingHeight;
             col.center = new Vector3(0f, standingHeight / 2f, 0f);
-            model.localRotation = Quaternion.Euler(0f, 90f, 90f); // standing upright
+            model.localRotation = Quaternion.Euler(0f, 90f, 90f);
         }
     }
 
+    // Handles jumping when grounded
     void HandleJump()
     {
         if (isGrounded && Input.GetButtonDown("Jump"))
@@ -106,15 +115,18 @@ public class PlayerControllerRB : MonoBehaviour
         }
     }
 
+    // Applies gravity to the Rigidbody when not grounded
     void ApplyGravity()
     {
         if (!isGrounded)
         {
             rb.velocity += Vector3.up * gravity * Time.deltaTime;
+            // Clamp fall speed to prevent excessive downward force
             rb.velocity = new Vector3(rb.velocity.x, Mathf.Max(rb.velocity.y, gravity), rb.velocity.z);
         }
     }
 
+    // Save the player's position and collider height to a file
     public void SavePlayer()
     {
         PlayerSaveData data = new PlayerSaveData
@@ -130,6 +142,7 @@ public class PlayerControllerRB : MonoBehaviour
         Debug.Log("Player saved.");
     }
 
+    // Load the player's position and collider height from a file
     public void LoadPlayer()
     {
         string path = Application.persistentDataPath + "/player_save.json";
@@ -151,6 +164,7 @@ public class PlayerControllerRB : MonoBehaviour
     }
 }
 
+// Data structure for saving player state
 [System.Serializable]
 public class PlayerSaveData
 {
