@@ -1,8 +1,8 @@
 using UnityEngine;
 using System.IO;
 
-[RequireComponent(typeof(CharacterController))]
-public class PlayerController : MonoBehaviour
+[RequireComponent(typeof(Rigidbody), typeof(CapsuleCollider))]
+public class PlayerControllerRB : MonoBehaviour
 {
     [Header("References")]
     public Transform cameraTransform;
@@ -20,57 +20,51 @@ public class PlayerController : MonoBehaviour
     public float standingHeight = 2f;
     public float crouchingHeight = 1f;
 
-    private CharacterController controller;
+    private Rigidbody rb;
+    private CapsuleCollider col;
     private Vector3 velocity;
-    private float currentSpeed;
     private bool isGrounded;
+    private float currentSpeed;
     private float turnSmoothVelocity;
 
     private void Start()
     {
-        controller = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
+        col = GetComponent<CapsuleCollider>();
         Cursor.lockState = CursorLockMode.Locked;
+
+        // Start lying on side
+        model.localRotation = Quaternion.Euler(0f, 0f, 90f);
+        col.height = crouchingHeight;
+        col.center = new Vector3(0f, crouchingHeight / 2f, 0f);
     }
 
     private void Update()
     {
-        isGrounded = controller.isGrounded;
+        HandleCrouch();
 
         Vector3 move = HandleMovement();
-        HandleJump();
+        Vector3 newPos = rb.position + move * currentSpeed * Time.deltaTime;
+        rb.MovePosition(newPos);
+
         ApplyGravity();
-
-        Vector3 finalMove = move * currentSpeed + new Vector3(0f, velocity.y, 0f);
-        controller.Move(finalMove * Time.deltaTime);
-
-        if (isGrounded && velocity.y < 0)
-            velocity.y = -2f;
+        HandleJump();
 
         if (Input.GetKeyDown(KeyCode.F5)) SavePlayer();
         if (Input.GetKeyDown(KeyCode.F9)) LoadPlayer();
     }
 
+    void FixedUpdate()
+    {
+        // Ground check
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, col.bounds.extents.y + 0.1f);
+    }
 
     Vector3 HandleMovement()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveZ = Input.GetAxisRaw("Vertical");
         Vector3 direction = new Vector3(moveX, 0f, moveZ).normalized;
-
-        if (Input.GetKey(KeyCode.LeftControl))
-        {
-            controller.height = crouchingHeight;
-            currentSpeed = crouchSpeed;
-            model.localRotation = Quaternion.Euler(90f, 0f, 0f);
-            model.localPosition = new Vector3(0f, -0.25f, 0f);
-        }
-        else
-        {
-            controller.height = standingHeight;
-            currentSpeed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
-            model.localRotation = Quaternion.Euler(0f, 0f, 0f);
-            model.localPosition = new Vector3(0f, -0.2f, 0f);
-        }
 
         if (direction.magnitude >= 0.1f)
         {
@@ -85,22 +79,40 @@ public class PlayerController : MonoBehaviour
         return Vector3.zero;
     }
 
+    void HandleCrouch()
+    {
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            currentSpeed = crouchSpeed;
+            col.height = crouchingHeight;
+            col.center = new Vector3(0f, crouchingHeight / 2f, 0f);
+            model.localRotation = Quaternion.Euler(0f, 90f, 0f); // lying on side
+        }
+        else
+        {
+            currentSpeed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
+            col.height = standingHeight;
+            col.center = new Vector3(0f, standingHeight / 2f, 0f);
+            model.localRotation = Quaternion.Euler(0f, 90f, 90f); // standing upright
+        }
+    }
 
     void HandleJump()
     {
         if (isGrounded && Input.GetButtonDown("Jump"))
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            float jumpVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            rb.velocity = new Vector3(rb.velocity.x, jumpVelocity, rb.velocity.z);
         }
     }
 
     void ApplyGravity()
     {
-        velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
-
-        if (isGrounded && velocity.y < 0)
-            velocity.y = -2f;
+        if (!isGrounded)
+        {
+            rb.velocity += Vector3.up * gravity * Time.deltaTime;
+            rb.velocity = new Vector3(rb.velocity.x, Mathf.Max(rb.velocity.y, gravity), rb.velocity.z);
+        }
     }
 
     public void SavePlayer()
@@ -110,7 +122,7 @@ public class PlayerController : MonoBehaviour
             positionX = transform.position.x,
             positionY = transform.position.y,
             positionZ = transform.position.z,
-            height = controller.height
+            height = col.height
         };
 
         string json = JsonUtility.ToJson(data, true);
@@ -126,10 +138,9 @@ public class PlayerController : MonoBehaviour
             string json = File.ReadAllText(path);
             PlayerSaveData data = JsonUtility.FromJson<PlayerSaveData>(json);
 
-            controller.enabled = false;
-            transform.position = new Vector3(data.positionX, data.positionY, data.positionZ);
-            controller.height = data.height;
-            controller.enabled = true;
+            rb.position = new Vector3(data.positionX, data.positionY, data.positionZ);
+            col.height = data.height;
+            col.center = new Vector3(0f, data.height / 2f, 0f);
 
             Debug.Log("Player loaded.");
         }
