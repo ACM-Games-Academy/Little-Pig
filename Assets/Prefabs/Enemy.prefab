@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8954394117137632461}
   - component: {fileID: 2364648556010024566}
   - component: {fileID: 1167907757679442757}
-  - component: {fileID: 6145773086233412942}
   - component: {fileID: 5540331470042349435}
   - component: {fileID: 6702161503686791632}
 
@@ -111,6 +110,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!54 &6145773086233412942
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -139,6 +139,8 @@ Rigidbody:
   m_Constraints: 112
   m_CollisionDetection: 0
 
+=======
+>>>>>>> Stashed changes
 --- !u!114 &5540331470042349435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,6 +156,7 @@ MonoBehaviour:
   player: {fileID: 0}
   roamRadius: 10
   visionRange: 10
+  fieldOfViewAngle: 90
   roamWaitTime: 3
 --- !u!195 &6702161503686791632
 NavMeshAgent:

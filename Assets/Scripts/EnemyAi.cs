@@ -5,21 +5,29 @@ public class EnemyAI : MonoBehaviour
 {
     public Transform player;
 
-    public float roamRadius = 10f;
     public float visionRange = 10f;
     public float fieldOfViewAngle = 90f;
-    public float roamWaitTime = 3f;
+    public float chaseTimeout = 5f;
+
+    public Transform[] patrolPoints;
+    public float patrolWaitTime = 2f;
 
     private NavMeshAgent agent;
-    private Vector3 roamDestination;
-    private float roamTimer;
+    private int currentPatrolIndex;
     private bool playerInSight;
+    private float lastSeenPlayerTimer;
+    private float patrolWaitTimer;
+    private bool isPatrolling = true;
 
     void Start()
     {
-        // Start roaming to a random location
         agent = GetComponent<NavMeshAgent>();
-        SetNewRoamDestination();
+
+        if (patrolPoints.Length > 0)
+        {
+            currentPatrolIndex = 0;
+            SetPatrolDestination();
+        }
     }
 
     void Update()
@@ -28,25 +36,38 @@ public class EnemyAI : MonoBehaviour
 
         if (playerInSight)
         {
-            // Chase the player if they're seen
+            isPatrolling = false;
+            lastSeenPlayerTimer = 0f;
             agent.SetDestination(player.position);
         }
-        else
+        else if (!playerInSight && !isPatrolling)
         {
-            // Roam when the player isn't visible
+            // Lost sight of player — count time since last seen
+            lastSeenPlayerTimer += Time.deltaTime;
+
+            if (lastSeenPlayerTimer >= chaseTimeout)
+            {
+                // Resume patrolling after timeout
+                isPatrolling = true;
+                SetPatrolDestination();
+            }
+        }
+
+        // Patrolling logic
+        if (isPatrolling && patrolPoints.Length > 0)
+        {
             if (!agent.pathPending && agent.remainingDistance < 0.5f)
             {
-                roamTimer += Time.deltaTime;
-                if (roamTimer >= roamWaitTime)
+                patrolWaitTimer += Time.deltaTime;
+                if (patrolWaitTimer >= patrolWaitTime)
                 {
-                    SetNewRoamDestination();
-                    roamTimer = 0f;
+                    GoToNextPatrolPoint();
+                    patrolWaitTimer = 0f;
                 }
             }
         }
     }
 
-    // Checks if the player is within vision range and cone
     bool IsPlayerInSight()
     {
         Vector3 directionToPlayer = (player.position - transform.position);
@@ -62,16 +83,16 @@ public class EnemyAI : MonoBehaviour
         return dot >= threshold;
     }
 
-    // Chooses a random valid point nearby for the enemy to walk to
-    void SetNewRoamDestination()
+    void SetPatrolDestination()
     {
-        Vector3 randomDirection = Random.insideUnitSphere * roamRadius;
-        randomDirection += transform.position;
+        if (patrolPoints.Length == 0) return;
 
-        if (NavMesh.SamplePosition(randomDirection, out NavMeshHit hit, roamRadius, NavMesh.AllAreas))
-        {
-            roamDestination = hit.position;
-            agent.SetDestination(roamDestination);
-        }
+        agent.SetDestination(patrolPoints[currentPatrolIndex].position);
+    }
+
+    void GoToNextPatrolPoint()
+    {
+        currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;
+        SetPatrolDestination();
     }
 }
