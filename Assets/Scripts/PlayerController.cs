@@ -11,15 +11,15 @@ public class PlayerControllerRB : MonoBehaviour
     [Header("Movement")]
     public float walkSpeed = 4f;
     public float runSpeed = 8f;
-    public float crouchSpeed = 2f;
+    public float StandingSpeed = 2f;
     public float jumpHeight = 1.2f;
     public float gravity = -9.81f;
     public float turnSmoothTime = 0.1f;
     public float acceleration = 10f;
 
-    [Header("Crouching")]
+    [Header("Standing")]
     public float standingHeight = 2f;
-    public float crouchingHeight = 1f;
+    public float StandingingHeight = 1f;
 
     private Rigidbody rb;
     private CapsuleCollider col;
@@ -35,10 +35,10 @@ public class PlayerControllerRB : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         col = GetComponent<CapsuleCollider>();
 
-        // Start in crouched position and lying down
+        // Start in Standing position and lying down
         model.localRotation = Quaternion.Euler(0f, 0f, 90f);
-        col.height = crouchingHeight;
-        col.center = new Vector3(0f, crouchingHeight / 2f, 0f);
+        col.height = StandingingHeight;
+        col.center = new Vector3(0f, StandingingHeight / 2f, 0f);
 
         rb.constraints = RigidbodyConstraints.FreezeRotation;
     }
@@ -46,7 +46,7 @@ public class PlayerControllerRB : MonoBehaviour
     private void Update()
     {
         HandleInput();
-        HandleCrouch();
+        HandleStanding();
         HandleJump();
 
         if (Input.GetKeyDown(KeyCode.F5)) SavePlayer();
@@ -76,13 +76,13 @@ public class PlayerControllerRB : MonoBehaviour
         inputDirection = (camForward * moveZ + camRight * moveX).normalized;
     }
 
-    private void HandleCrouch()
+    private void HandleStanding()
     {
         if (Input.GetKey(KeyCode.LeftControl))
         {
-            currentSpeed = crouchSpeed;
-            col.height = crouchingHeight;
-            col.center = new Vector3(0f, crouchingHeight / 2f, 0f);
+            currentSpeed = StandingSpeed;
+            col.height = StandingingHeight;
+            col.center = new Vector3(0f, StandingingHeight / 2f, 0f);
             model.localRotation = Quaternion.Euler(0f, 0f, 0f);
         }
         else
