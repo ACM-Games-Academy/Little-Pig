@@ -74,6 +74,13 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+    public void Alert(Vector3 position)
+    {
+        isChasing = true;
+        lastSeenTimer = 0f;
+        SetDestination(position);
+    }
+
     bool CanSeePlayer()
     {
         Vector3 direction = (player.position - transform.position).normalized;
