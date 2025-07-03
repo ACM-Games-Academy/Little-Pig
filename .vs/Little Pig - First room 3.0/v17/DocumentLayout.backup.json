@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mathw\\Downloads\\Little Pig - First room 3.0\\Little Pig - First room 3.0\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4A6C5D04-40C1-C82A-D859-A0A47E76FC18}|Assembly-CSharp.csproj|c:\\users\\mathw\\downloads\\little pig - first room 3.0\\little pig - first room 3.0\\assets\\scripts\\camswitcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A6C5D04-40C1-C82A-D859-A0A47E76FC18}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camswitcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CamSwitcher.cs",
+              "DocumentMoniker": "C:\\Users\\mathw\\Downloads\\Little Pig - First room 3.0\\Little Pig - First room 3.0\\Assets\\Scripts\\CamSwitcher.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CamSwitcher.cs",
+              "ToolTip": "C:\\Users\\mathw\\Downloads\\Little Pig - First room 3.0\\Little Pig - First room 3.0\\Assets\\Scripts\\CamSwitcher.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CamSwitcher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T13:43:41.702Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -12,6 +12,7 @@ public class EnemyAI : MonoBehaviour
 
     [Header("Chase")]
     public float chaseTimeout = 5f;
+    public float chaseSpeedMultiplier = 1.2f; // <-- New multiplier
 
     [Header("Patrol")]
     public Transform[] patrolPoints;
@@ -22,10 +23,14 @@ public class EnemyAI : MonoBehaviour
     private float lastSeenTimer = 0f;
     private float waitTimer = 0f;
     private bool isChasing = false;
+    private Animator animator;
+    private float baseSpeed;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
+        baseSpeed = agent.speed;
 
         if (patrolPoints.Length > 0)
             SetDestination(patrolPoints[currentPatrolIndex].position);
@@ -33,8 +38,9 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
-        // Vision check
         bool seesPlayer = CanSeePlayer();
+        float movementSpeed = agent.velocity.magnitude;
+        animator.SetFloat("Speed", movementSpeed);
 
         if (seesPlayer)
         {
@@ -48,7 +54,6 @@ public class EnemyAI : MonoBehaviour
 
             if (lastSeenTimer < chaseTimeout)
             {
-                // Keep chasing last known position
                 SetDestination(player.position);
             }
             else
@@ -72,6 +77,10 @@ public class EnemyAI : MonoBehaviour
                 }
             }
         }
+
+        // Set animation and speed state
+        animator.SetBool("chasing", isChasing);
+        agent.speed = isChasing ? baseSpeed * chaseSpeedMultiplier : baseSpeed;
     }
 
     public void Alert(Vector3 position)
@@ -91,7 +100,6 @@ public class EnemyAI : MonoBehaviour
         float angle = Vector3.Angle(transform.forward, direction);
         if (angle > fieldOfView * 0.5f) return false;
 
-        // Adjust ray height
         Vector3 origin = transform.position + Vector3.up * 1.2f;
         Vector3 target = player.position + Vector3.up * 0.3f;
 
