@@ -22307,7 +22307,7 @@ MonoBehaviour:
   fieldOfView: 30
   visionMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   player: {fileID: 1686391666}
   enemyAI: {fileID: 1046060188}
 --- !u!33 &7214737327919710841
