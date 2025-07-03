@@ -1,0 +1,36 @@
+{
+ "ProjectInfo": {
+  "Project": {
+   "Name": "Little-Pig_WwiseProject",
+   "GUID": "{51F60380-B3F5-4979-8A7F-A0827F86E123}",
+   "Generator": "2024.1.4.8780"
+  },
+  "CacheRoot": "../../../../Little-Pig_WwiseProject/.cache",
+  "Platforms": [
+   {
+    "Name": "Mac",
+    "GUID": "{8E87FDBB-0B63-47BB-A517-92F0C06F744C}",
+    "BasePlatform": "Mac",
+    "BasePlatformGUID": "{9C6217D5-DD11-4795-87C1-6CE02853C540}",
+    "Path": "../../../../Little-Pig_WwiseProject/GeneratedSoundBanks/Mac"
+   },
+   {
+    "Name": "Windows",
+    "GUID": "{6B60F5CC-9B25-4379-BAE3-85652CB80B5B}",
+    "BasePlatform": "Windows",
+    "BasePlatformGUID": "{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}",
+    "Path": "../../../../Little-Pig_WwiseProject/GeneratedSoundBanks/Windows"
+   }
+  ],
+  "Languages": [
+   {
+    "Name": "English(US)",
+    "Id": "684519430",
+    "GUID": "{5787C8FA-F8AC-49CD-ABF2-6E005C11C11D}",
+    "Default": "true",
+    "UseAsStandIn": "true"
+   }
+  ],
+  "FileHash": "{724F2DEB-FBE9-D3AA-B19D-E380882C7EA7}"
+ }
+}

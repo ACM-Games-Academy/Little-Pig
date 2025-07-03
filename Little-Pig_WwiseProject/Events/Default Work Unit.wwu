@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{ECE42DA9-D4AB-4B4D-B57C-A09EB2069224}" SchemaVersion="123">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{ECE42DA9-D4AB-4B4D-B57C-A09EB2069224}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Ambient_Music_FIN" ID="{F8E25A6B-C5A1-4524-94A7-FF82A17A3B52}">
+					<ChildrenList>
+						<Action Name="" ID="{83C7338A-13AD-4C30-B279-7C1925FC0A93}" ShortID="264049510">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambient_Music FIN" ID="{275F90F8-35E5-41CC-A3F9-AA4A55743B35}" WorkUnitID="{E24B6F1A-1385-4EC1-8693-408423E30C75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ambient_Noise" ID="{E4D10C1E-5400-4C08-815D-9BBCEAD9F92B}">
+					<ChildrenList>
+						<Action Name="" ID="{9811BD1B-EFBA-4DFA-96DD-07C9E1FCD712}" ShortID="236792205">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambient Noise" ID="{365A60E9-FF3B-4344-AA7E-DC3334CCF266}" WorkUnitID="{E24B6F1A-1385-4EC1-8693-408423E30C75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Concrete_Butcher_Footsteps" ID="{199009D6-52AD-4B79-92DF-DF9BBB72182F}">
+					<ChildrenList>
+						<Action Name="" ID="{373CD1B4-B078-4EED-AD52-28D3FA094278}" ShortID="744507709">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Concrete Butcher Footsteps" ID="{C2278023-864F-46FA-9B44-59E7704E0D70}" WorkUnitID="{E24B6F1A-1385-4EC1-8693-408423E30C75}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

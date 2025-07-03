@@ -1,0 +1,14 @@
+Event	ID	Name			Wwise Object Path	Notes
+	463827929	Play_Ambient_Noise			\Default Work Unit\Play_Ambient_Noise	
+	2018644784	Play_Ambient_Music_FIN			\Default Work Unit\Play_Ambient_Music_FIN	
+	4054536619	Play_Concrete_Butcher_Footsteps			\Default Work Unit\Play_Concrete_Butcher_Footsteps	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	147650897	Ambient Noise	C:\Users\cpm27\Documents\Little-Pig\Little-Pig_WwiseProject\.cache\97\{97DE9266-E69C-168E-9DA1-21DDF2193EBA}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient Noise		11665960
+	214372811	Shoe Step Stone Hard E	C:\Users\cpm27\Documents\Little-Pig\Little-Pig_WwiseProject\.cache\F1\{F1AC9941-EE48-F378-86A8-DA076B27EA54}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Concrete Butcher Footsteps\Shoe Step Stone Hard E		131264
+	471781542	Shoe Step Stone Hard C	C:\Users\cpm27\Documents\Little-Pig\Little-Pig_WwiseProject\.cache\FD\{FDD76B7E-B00B-A941-44A3-C3C6092D73D9}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Concrete Butcher Footsteps\Shoe Step Stone Hard C		131264
+	635304339	Shoe Step Stone Hard A	C:\Users\cpm27\Documents\Little-Pig\Little-Pig_WwiseProject\.cache\0C\{0CB90F62-CEF5-879D-BD8D-5478C2FB61F4}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Concrete Butcher Footsteps\Shoe Step Stone Hard A		131264
+	688800982	Shoe Step Stone Hard B	C:\Users\cpm27\Documents\Little-Pig\Little-Pig_WwiseProject\.cache\4E\{4EE85CE2-56DB-1CCB-4B0F-C1C139DE0DB1}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Concrete Butcher Footsteps\Shoe Step Stone Hard B		131264
+	745377053	Ambient_Music FIN	C:\Users\cpm27\Documents\Little-Pig\Little-Pig_WwiseProject\.cache\A0\{A06C794F-931A-63E1-42AB-09F1A35F92D1}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient_Music FIN		10186424
+	882615826	Shoe Step Stone Hard D	C:\Users\cpm27\Documents\Little-Pig\Little-Pig_WwiseProject\.cache\88\{8813DE10-638B-6852-AF8A-FAE2FFA09DCF}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Concrete Butcher Footsteps\Shoe Step Stone Hard D		131264
+

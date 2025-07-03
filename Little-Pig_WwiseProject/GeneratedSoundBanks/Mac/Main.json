@@ -1,0 +1,130 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3161908922",
+    "Type": "User",
+    "GUID": "{C162C903-D079-4D40-97A9-253836233BC9}",
+    "Language": "SFX",
+    "Hash": "{84C91FC3-0343-B4B5-3CDB-92A714B30D18}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
+    "ShortName": "Main",
+    "Path": "Main.bnk",
+    "Media": [
+     {
+      "Id": "147650897",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Ambient Noise.wav",
+      "CachePath": "97/{97DE9266-E69C-168E-9DA1-21DDF2193EBA}.wem"
+     },
+     {
+      "Id": "214372811",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shoe Step Stone Hard E.wav",
+      "CachePath": "F1/{F1AC9941-EE48-F378-86A8-DA076B27EA54}.wem"
+     },
+     {
+      "Id": "471781542",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shoe Step Stone Hard C.wav",
+      "CachePath": "FD/{FDD76B7E-B00B-A941-44A3-C3C6092D73D9}.wem"
+     },
+     {
+      "Id": "635304339",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shoe Step Stone Hard A.wav",
+      "CachePath": "0C/{0CB90F62-CEF5-879D-BD8D-5478C2FB61F4}.wem"
+     },
+     {
+      "Id": "688800982",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shoe Step Stone Hard B.wav",
+      "CachePath": "4E/{4EE85CE2-56DB-1CCB-4B0F-C1C139DE0DB1}.wem"
+     },
+     {
+      "Id": "745377053",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Ambient_Music FIN.wav",
+      "CachePath": "A0/{A06C794F-931A-63E1-42AB-09F1A35F92D1}.wem"
+     },
+     {
+      "Id": "882615826",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shoe Step Stone Hard D.wav",
+      "CachePath": "88/{8813DE10-638B-6852-AF8A-FAE2FFA09DCF}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2018644784",
+      "Name": "Play_Ambient_Music_FIN",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Ambient_Music_FIN",
+      "GUID": "{F8E25A6B-C5A1-4524-94A7-FF82A17A3B52}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "745377053"
+       }
+      ]
+     },
+     {
+      "Id": "463827929",
+      "Name": "Play_Ambient_Noise",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Ambient_Noise",
+      "GUID": "{E4D10C1E-5400-4C08-815D-9BBCEAD9F92B}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "147650897"
+       }
+      ]
+     },
+     {
+      "Id": "4054536619",
+      "Name": "Play_Concrete_Butcher_Footsteps",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Concrete_Butcher_Footsteps",
+      "GUID": "{199009D6-52AD-4B79-92DF-DF9BBB72182F}",
+      "MaxAttenuation": "10",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "214372811"
+       },
+       {
+        "Id": "471781542"
+       },
+       {
+        "Id": "635304339"
+       },
+       {
+        "Id": "688800982"
+       },
+       {
+        "Id": "882615826"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{CA37B0CB-E222-D7E4-4F5A-A43ADE101FFC}"
+ }
+}

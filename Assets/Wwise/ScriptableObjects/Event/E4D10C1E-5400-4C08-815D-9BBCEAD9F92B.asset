@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dce8b68555d60d40a61f3a38004c523, type: 3}
+  m_Name: E4D10C1E-5400-4C08-815D-9BBCEAD9F92B
+  m_EditorClassIdentifier: 
+  objectName: Play_Ambient_Noise
+  id: 463827929
+  guid: E4D10C1E-5400-4C08-815D-9BBCEAD9F92B
+  IsInUserDefinedSoundBank: 1

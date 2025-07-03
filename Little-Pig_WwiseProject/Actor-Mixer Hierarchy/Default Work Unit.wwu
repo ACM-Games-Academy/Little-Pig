@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E24B6F1A-1385-4EC1-8693-408423E30C75}" SchemaVersion="123">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{E24B6F1A-1385-4EC1-8693-408423E30C75}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Ambient_Music FIN" ID="{275F90F8-35E5-41CC-A3F9-AA4A55743B35}" ShortID="546051453">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1DD47F4-DBD9-4F7F-A0A1-EAE306F7202F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{260F5AF6-EAEF-437C-97D9-8B3413CAF075}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ambient_Music FIN" ID="{570FAC60-0B07-4AE4-9B82-CBDC7F841979}">
+							<PropertyList>
+								<Property Name="LoopEnd" Type="Real64" Value="57.6727259993976"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="57.7453616762748"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Ambient_Music FIN.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="745377053"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ambient_Music FIN" ID="{570FAC60-0B07-4AE4-9B82-CBDC7F841979}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ambient Noise" ID="{365A60E9-FF3B-4344-AA7E-DC3334CCF266}" ShortID="440556821">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1DD47F4-DBD9-4F7F-A0A1-EAE306F7202F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{260F5AF6-EAEF-437C-97D9-8B3413CAF075}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ambient Noise" ID="{FDEDA0ED-4C43-4884-B1F7-5F7C97FDB363}">
+							<Language>SFX</Language>
+							<AudioFile>Ambient Noise.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="147650897"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ambient Noise" ID="{FDEDA0ED-4C43-4884-B1F7-5F7C97FDB363}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="Concrete Butcher Footsteps" ID="{C2278023-864F-46FA-9B44-59E7704E0D70}" ShortID="223784769">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="InitialDelay" Type="Real64">
+							<ValueList>
+								<Value>0.4</Value>
+							</ValueList>
+						</Property>
+						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<Custom>
+								<Attenuation Name="Attenuation (Custom)" ID="{367DAF91-0AD3-4CF8-ABEB-C7FFD806C6DE}" ShortID="310505582">
+									<PropertyList>
+										<Property Name="RadiusMax" Type="Real64" Value="10"/>
+									</PropertyList>
+									<CurveUsageInfoList>
+										<VolumeDryUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
+												<Curve Name="VolumeDry" ID="{9C12CD6A-E6D1-410E-99E5-7BE8FEAEE738}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="3"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+														</Point>
+														<Point>
+															<XPos>10</XPos>
+															<YPos>-200</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
+										</VolumeDryUsage>
+										<VolumeWetGameUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetGameUsage>
+										<VolumeWetUserUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+										</VolumeWetUserUsage>
+										<LowPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</LowPassFilterUsage>
+										<HighPassFilterUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</HighPassFilterUsage>
+										<SpreadUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</SpreadUsage>
+										<FocusUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+										</FocusUsage>
+										<ObstructionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</ObstructionVolumeUsage>
+										<ObstructionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</ObstructionLPFUsage>
+										<ObstructionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</ObstructionHPFUsage>
+										<OcclusionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</OcclusionVolumeUsage>
+										<OcclusionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</OcclusionLPFUsage>
+										<OcclusionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</OcclusionHPFUsage>
+										<DiffractionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</DiffractionVolumeUsage>
+										<DiffractionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</DiffractionLPFUsage>
+										<DiffractionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</DiffractionHPFUsage>
+										<TransmissionVolumeUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</TransmissionVolumeUsage>
+										<TransmissionLPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</TransmissionLPFUsage>
+										<TransmissionHPFUsage>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseProject"/>
+										</TransmissionHPFUsage>
+									</CurveUsageInfoList>
+								</Attenuation>
+							</Custom>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1DD47F4-DBD9-4F7F-A0A1-EAE306F7202F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{260F5AF6-EAEF-437C-97D9-8B3413CAF075}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Shoe Step Stone Hard A" ID="{87713BAF-5BE7-4938-A775-F092BCC04903}" ShortID="1009138358">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1DD47F4-DBD9-4F7F-A0A1-EAE306F7202F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{260F5AF6-EAEF-437C-97D9-8B3413CAF075}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Shoe Step Stone Hard A" ID="{E9372A59-F976-43A8-8B10-B87C45A0A316}">
+									<Language>SFX</Language>
+									<AudioFile>Shoe Step Stone Hard A.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="635304339"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Shoe Step Stone Hard A" ID="{E9372A59-F976-43A8-8B10-B87C45A0A316}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Shoe Step Stone Hard B" ID="{97A17F8F-BF00-435B-8D66-461D79BA32BC}" ShortID="233378420">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1DD47F4-DBD9-4F7F-A0A1-EAE306F7202F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{260F5AF6-EAEF-437C-97D9-8B3413CAF075}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Shoe Step Stone Hard B" ID="{E1DF50DB-D23D-48BC-B8D7-DB07E8E289E4}">
+									<Language>SFX</Language>
+									<AudioFile>Shoe Step Stone Hard B.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="688800982"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Shoe Step Stone Hard B" ID="{E1DF50DB-D23D-48BC-B8D7-DB07E8E289E4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Shoe Step Stone Hard C" ID="{B9F2D559-269A-4F36-8D23-0412210180BF}" ShortID="479977211">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1DD47F4-DBD9-4F7F-A0A1-EAE306F7202F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{260F5AF6-EAEF-437C-97D9-8B3413CAF075}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Shoe Step Stone Hard C" ID="{DACD9F43-92EF-464E-A424-32336A5DF880}">
+									<Language>SFX</Language>
+									<AudioFile>Shoe Step Stone Hard C.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="471781542"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Shoe Step Stone Hard C" ID="{DACD9F43-92EF-464E-A424-32336A5DF880}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Shoe Step Stone Hard D" ID="{B5B85B4F-17A6-4BCC-AC52-FAFF2B1E88F1}" ShortID="203070601">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1DD47F4-DBD9-4F7F-A0A1-EAE306F7202F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{260F5AF6-EAEF-437C-97D9-8B3413CAF075}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Shoe Step Stone Hard D" ID="{71C16C06-193D-41C9-9239-3D2E17DF4CE2}">
+									<Language>SFX</Language>
+									<AudioFile>Shoe Step Stone Hard D.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="882615826"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Shoe Step Stone Hard D" ID="{71C16C06-193D-41C9-9239-3D2E17DF4CE2}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Shoe Step Stone Hard E" ID="{2E8E950C-DC67-4F34-BD96-13576F239FD1}" ShortID="470408672">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E1DD47F4-DBD9-4F7F-A0A1-EAE306F7202F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{260F5AF6-EAEF-437C-97D9-8B3413CAF075}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Shoe Step Stone Hard E" ID="{48BB77A7-E0ED-41B6-96A4-C0A3853F228A}">
+									<Language>SFX</Language>
+									<AudioFile>Shoe Step Stone Hard E.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="214372811"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Shoe Step Stone Hard E" ID="{48BB77A7-E0ED-41B6-96A4-C0A3853F228A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
