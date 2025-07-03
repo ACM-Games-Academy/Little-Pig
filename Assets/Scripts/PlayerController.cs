@@ -5,108 +5,96 @@ using System.IO;
 public class PlayerControllerRB : MonoBehaviour
 {
     [Header("References")]
-    public Transform cameraTransform; // Reference to the camera for movement direction
-    public Transform model;           // Reference to the player model for visual rotation
+    public Transform cameraTransform; // Reference to camera for movement direction
+    public Transform model;           // Reference to player model for visual rotation
 
     [Header("Movement")]
     public float walkSpeed = 4f;
     public float runSpeed = 8f;
-    public float crouchSpeed = 2f;
+    public float StandingSpeed = 2f;
     public float jumpHeight = 1.2f;
     public float gravity = -9.81f;
     public float turnSmoothTime = 0.1f;
+    public float acceleration = 10f;
 
-    [Header("Crouching")]
+    [Header("Standing")]
     public float standingHeight = 2f;
-    public float crouchingHeight = 1f;
+    public float StandingingHeight = 1f;
 
     private Rigidbody rb;
     private CapsuleCollider col;
+
+    private Vector3 inputDirection;
     private Vector3 velocity;
-    private bool isGrounded;
     private float currentSpeed;
     private float turnSmoothVelocity;
+    private bool isGrounded;
 
     private void Start()
     {
-        // Get required components
         rb = GetComponent<Rigidbody>();
         col = GetComponent<CapsuleCollider>();
 
-        // Start in crouched position and lying on the side
+        // Start in Standing position and lying down
         model.localRotation = Quaternion.Euler(0f, 0f, 90f);
-        col.height = crouchingHeight;
-        col.center = new Vector3(0f, crouchingHeight / 2f, 0f);
+        col.height = StandingingHeight;
+        col.center = new Vector3(0f, StandingingHeight / 2f, 0f);
+
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
     }
 
     private void Update()
     {
-        // Handle crouch state and animations
-        HandleCrouch();
-
-        // Move player based on input and current speed
-        Vector3 move = HandleMovement();
-        Vector3 newPos = rb.position + move * currentSpeed * Time.deltaTime;
-        rb.MovePosition(newPos);
-
-        ApplyGravity();
+        HandleInput();
+        HandleStanding();
         HandleJump();
 
-        // Save/Load player position with F5/F9
         if (Input.GetKeyDown(KeyCode.F5)) SavePlayer();
         if (Input.GetKeyDown(KeyCode.F9)) LoadPlayer();
     }
 
     private void FixedUpdate()
     {
-        // Check if the player is grounded using a raycast
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, col.bounds.extents.y + 0.1f);
+        HandleGroundCheck();
+        ApplyMovement();
+        ApplyGravity();
     }
 
-    // Handles directional movement based on input and camera orientation
-    Vector3 HandleMovement()
+    private void HandleInput()
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveZ = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(moveX, 0f, moveZ).normalized;
 
-        if (direction.magnitude >= 0.1f)
-        {
-            // Calculate rotation angle based on input and camera
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+        Vector3 camForward = cameraTransform.forward;
+        Vector3 camRight = cameraTransform.right;
 
-            // Calculate movement direction relative to camera
-            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
-            return moveDir.normalized;
-        }
+        camForward.y = 0f;
+        camRight.y = 0f;
+        camForward.Normalize();
+        camRight.Normalize();
 
-        return Vector3.zero;
+        inputDirection = (camForward * moveZ + camRight * moveX).normalized;
     }
 
-    void HandleCrouch()
+    private void HandleStanding()
     {
         if (Input.GetKey(KeyCode.LeftControl))
         {
-            // Standing: taller collider and standing up model
-            currentSpeed = crouchSpeed;
-            col.height = crouchingHeight;
-            col.center = new Vector3(0f, crouchingHeight / 2f, 0f);
-            model.localRotation = Quaternion.Euler(0f, 90f, 0f);
+            currentSpeed = StandingSpeed;
+            col.height = StandingingHeight;
+            col.center = new Vector3(0f, StandingingHeight / 2f, 0f);
+            model.localRotation = Quaternion.Euler(0f, 0f, 0f);
         }
         else
         {
-            // Crouching: smaller collider and lying down model
             currentSpeed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
             col.height = standingHeight;
             col.center = new Vector3(0f, standingHeight / 2f, 0f);
-            model.localRotation = Quaternion.Euler(0f, 90f, 90f);
+            model.localRotation = Quaternion.Euler(0f, 0f, 90f);
         }
     }
 
-    // Handles jumping when grounded
-    void HandleJump()
+    private void HandleJump()
     {
         if (isGrounded && Input.GetButtonDown("Jump"))
         {
@@ -115,18 +103,39 @@ public class PlayerControllerRB : MonoBehaviour
         }
     }
 
-    // Applies gravity to the Rigidbody when not grounded
-    void ApplyGravity()
+    private void HandleGroundCheck()
     {
-        if (!isGrounded)
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, col.bounds.extents.y + 0.1f);
+    }
+
+    private void ApplyMovement()
+    {
+        Vector3 targetVelocity = inputDirection * currentSpeed;
+        Vector3 currentHorizontalVelocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+
+        // Smooth acceleration
+        Vector3 smoothedVelocity = Vector3.Lerp(currentHorizontalVelocity, targetVelocity, acceleration * Time.fixedDeltaTime);
+
+        // Apply smoothed velocity, preserve vertical component
+        rb.velocity = new Vector3(smoothedVelocity.x, rb.velocity.y, smoothedVelocity.z);
+
+        // Smoothly rotate player towards movement direction
+        if (inputDirection.magnitude >= 0.1f)
         {
-            rb.velocity += Vector3.up * gravity * Time.deltaTime;
-            // Clamp fall speed to prevent excessive downward force
-            rb.velocity = new Vector3(rb.velocity.x, Mathf.Max(rb.velocity.y, gravity), rb.velocity.z);
+            float targetAngle = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
         }
     }
 
-    // Save the player's position and collider height to a file
+    private void ApplyGravity()
+    {
+        if (!isGrounded)
+        {
+            rb.velocity += Vector3.up * gravity * Time.fixedDeltaTime;
+        }
+    }
+
     public void SavePlayer()
     {
         PlayerSaveData data = new PlayerSaveData
@@ -142,7 +151,6 @@ public class PlayerControllerRB : MonoBehaviour
         Debug.Log("Player saved.");
     }
 
-    // Load the player's position and collider height from a file
     public void LoadPlayer()
     {
         string path = Application.persistentDataPath + "/player_save.json";
@@ -164,7 +172,6 @@ public class PlayerControllerRB : MonoBehaviour
     }
 }
 
-// Data structure for saving player state
 [System.Serializable]
 public class PlayerSaveData
 {
