@@ -8,6 +8,8 @@ public class DoorController : MonoBehaviour
     public string openTriggerName = "Open";
     public string closeTriggerName = "Close";
 
+    public GameObject toEnable;
+
     private bool isOpen = false;
     private bool playerInRange = false;
     private Coroutine autoCloseCoroutine;
@@ -17,6 +19,11 @@ public class DoorController : MonoBehaviour
         if (playerInRange && !isOpen && Input.GetKeyDown(KeyCode.E))
         {
             OpenDoor();
+
+            if (toEnable != null)
+            {
+                toEnable.SetActive(true);
+            }
         }
     }
 
