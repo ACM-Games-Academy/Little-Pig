@@ -6618,6 +6618,8 @@ MonoBehaviour:
   rightDoorAnimator: {fileID: 381148860}
   openTriggerName: Open
   closeTriggerName: Close
+  virtualCam: {fileID: 609586445}
+  player: {fileID: 1686391669}
   toEnable: {fileID: 1355554776}
 --- !u!1 &760134106
 GameObject:
@@ -7126,6 +7128,10 @@ PrefabInstance:
     - target: {fileID: 5116656897135582422, guid: cd31e0a9be71ecd45aa378cd6f7a4383, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8353932195347547627, guid: cd31e0a9be71ecd45aa378cd6f7a4383, type: 3}
+      propertyPath: m_Constraints
+      value: 126
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10187,6 +10193,10 @@ PrefabInstance:
     - target: {fileID: 5116656897135582422, guid: cd31e0a9be71ecd45aa378cd6f7a4383, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8353932195347547627, guid: cd31e0a9be71ecd45aa378cd6f7a4383, type: 3}
+      propertyPath: m_Constraints
+      value: 126
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13736,6 +13746,8 @@ MonoBehaviour:
   rightDoorAnimator: {fileID: 460280614}
   openTriggerName: Open
   closeTriggerName: Close
+  virtualCam: {fileID: 0}
+  player: {fileID: 0}
   toEnable: {fileID: 0}
 --- !u!65 &1567504625
 BoxCollider:
@@ -14439,7 +14451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b61c03afc705e9148bb7b4a6493e0a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraTransform: {fileID: 963194228}
+  cameraTransform: {fileID: 1982369741}
   model: {fileID: 1406450561}
   walkSpeed: 2.5
   runSpeed: 3.5
@@ -14452,6 +14464,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 72
+  rotationOffset: 0
   animator: {fileID: 1406450562}
 --- !u!1 &1700228926
 GameObject:
@@ -17263,6 +17276,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8353932195347547627, guid: cd31e0a9be71ecd45aa378cd6f7a4383, type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17779,6 +17796,10 @@ PrefabInstance:
     - target: {fileID: 5116656897135582422, guid: cd31e0a9be71ecd45aa378cd6f7a4383, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8353932195347547627, guid: cd31e0a9be71ecd45aa378cd6f7a4383, type: 3}
+      propertyPath: m_Constraints
+      value: 126
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

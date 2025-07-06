@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using Cinemachine;
 
 public class DoorController : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class DoorController : MonoBehaviour
     public Animator rightDoorAnimator;
     public string openTriggerName = "Open";
     public string closeTriggerName = "Close";
+    public CinemachineVirtualCamera virtualCam;
+    public PlayerControllerRB player;
 
     public GameObject toEnable;
 
@@ -59,6 +62,19 @@ public class DoorController : MonoBehaviour
             StopCoroutine(autoCloseCoroutine);
 
         autoCloseCoroutine = StartCoroutine(AutoCloseAfterDelay());
+
+        if (toEnable != null)
+            toEnable.SetActive(true);
+
+        if (virtualCam != null)
+        {
+            CinemachineTransposer transposer = virtualCam.GetCinemachineComponent<CinemachineTransposer>();
+            if (transposer != null)
+            {
+                player.rotationOffset = -90f;
+                transposer.m_FollowOffset = new Vector3(2f, 1.50f, 0f);
+            }
+        }
     }
 
     public void CloseDoor()

@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "E:\\Game\\Uni Project\\Little-Pig\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EFA799A4-1436-1CE4-58DC-F4D2102E49B1}|Assembly-CSharp.csproj|e:\\game\\uni project\\little-pig\\assets\\scripts\\animationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFA799A4-1436-1CE4-58DC-F4D2102E49B1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\animationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFA799A4-1436-1CE4-58DC-F4D2102E49B1}|Assembly-CSharp.csproj|E:\\Game\\Uni Project\\Little-Pig\\assets\\scripts\\enemyai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFA799A4-1436-1CE4-58DC-F4D2102E49B1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemyai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EFA799A4-1436-1CE4-58DC-F4D2102E49B1}|Assembly-CSharp.csproj|e:\\game\\uni project\\little-pig\\assets\\scripts\\camerabehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EFA799A4-1436-1CE4-58DC-F4D2102E49B1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camerabehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFA799A4-1436-1CE4-58DC-F4D2102E49B1}|Assembly-CSharp.csproj|e:\\game\\uni project\\little-pig\\assets\\scripts\\enemyai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFA799A4-1436-1CE4-58DC-F4D2102E49B1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemyai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EFA799A4-1436-1CE4-58DC-F4D2102E49B1}|Assembly-CSharp.csproj|e:\\game\\uni project\\little-pig\\assets\\scripts\\doorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFA799A4-1436-1CE4-58DC-F4D2102E49B1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\doorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +26,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AnimationManager.cs",
+              "DocumentMoniker": "E:\\Game\\Uni Project\\Little-Pig\\Assets\\Scripts\\AnimationManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\AnimationManager.cs",
+              "ToolTip": "E:\\Game\\Uni Project\\Little-Pig\\Assets\\Scripts\\AnimationManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\AnimationManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T20:24:31.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DoorController.cs",
+              "DocumentMoniker": "E:\\Game\\Uni Project\\Little-Pig\\Assets\\Scripts\\DoorController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DoorController.cs",
+              "ToolTip": "E:\\Game\\Uni Project\\Little-Pig\\Assets\\Scripts\\DoorController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DoorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T19:48:14.252Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -28,20 +62,20 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\EnemyAi.cs",
               "ToolTip": "E:\\Game\\Uni Project\\Little-Pig\\Assets\\Scripts\\EnemyAi.cs",
               "RelativeToolTip": "Assets\\Scripts\\EnemyAi.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwEUAAABOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-22T14:12:07.993Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "CameraBehaviour.cs",
               "DocumentMoniker": "E:\\Game\\Uni Project\\Little-Pig\\Assets\\Scripts\\CameraBehaviour.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CameraBehaviour.cs",
               "ToolTip": "E:\\Game\\Uni Project\\Little-Pig\\Assets\\Scripts\\CameraBehaviour.cs",
               "RelativeToolTip": "Assets\\Scripts\\CameraBehaviour.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAA0wHMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-22T14:11:31.757Z",
               "EditorCaption": ""

@@ -34,6 +34,9 @@ public class PlayerControllerRB : MonoBehaviour
     private bool isGrounded;
     public LayerMask groundLayer;
 
+    [Header("Camera Offset")]
+    public float rotationOffset = 0f;
+
     [Header("Animation")]
     public Animator animator;
     private bool isStanding;
@@ -83,8 +86,8 @@ public class PlayerControllerRB : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveZ = Input.GetAxisRaw("Vertical");
 
-        Vector3 camForward = cameraTransform.forward;
-        Vector3 camRight = cameraTransform.right;
+        Vector3 camForward = cameraTransform.rotation * Vector3.forward;
+        Vector3 camRight = cameraTransform.rotation * Vector3.right;
 
         camForward.y = 0f;
         camRight.y = 0f;
@@ -174,7 +177,7 @@ public class PlayerControllerRB : MonoBehaviour
         // Smoothly rotate player towards movement direction
         if (inputDirection.magnitude >= 0.1f)
         {
-            float targetAngle = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
+            float targetAngle = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y + rotationOffset;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
         }
