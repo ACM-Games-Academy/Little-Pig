@@ -72,7 +72,7 @@ public class DoorController : MonoBehaviour
             if (transposer != null)
             {
                 player.rotationOffset = -90f;
-                transposer.m_FollowOffset = new Vector3(2f, 1.50f, 0f);
+                transposer.m_FollowOffset = new Vector3(2f, 1f, 0f);
             }
         }
     }
