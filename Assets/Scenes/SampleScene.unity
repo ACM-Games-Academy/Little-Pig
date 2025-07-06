@@ -12180,8 +12180,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.6050525, y: 0.6087025, z: 0.609788}
+  m_Center: {x: 0.004030466, y: 0.29669723, z: -0.002118498}
 --- !u!1 &1402013582
 GameObject:
   m_ObjectHideFlags: 0
@@ -18382,7 +18382,7 @@ MonoBehaviour:
   rotationSpeed: 15
   maxRotationAngle: 30
   pauseDuration: 1
-  visionRange: 7.75
+  visionRange: 8.45
   fieldOfView: 35
   visionMask:
     serializedVersion: 2
