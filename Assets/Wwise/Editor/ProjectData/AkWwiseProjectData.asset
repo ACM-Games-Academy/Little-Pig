@@ -144,7 +144,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: d6099019ad52794b92dfdf9bbb72182f
       Path: Events\Default Work Unit\Play_Concrete_Butcher_Footsteps
-      maxAttenuation: 0
+      maxAttenuation: 10
       maxDuration: 0
       minDuration: 0
   RtpcWwu:
