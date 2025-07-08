@@ -9,9 +9,6 @@
 [Bb]uilds/
 [Ll]ogs/
 [Uu]ser[Ss]ettings/
-Assets/StreamingAssets/aa.meta
-Assets/StreamingAssets/aa/
-Assets/AddressableAssetsData/**/*.bin*
 sysinfo.txt
 
 # Cache and State
