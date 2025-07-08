@@ -142,7 +142,7 @@ public class PlayerControllerRB : MonoBehaviour
 
     private void HandleJump()
     {
-        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
+        if (isGrounded && !isStanding && Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("Jump triggered");
             float jumpVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
