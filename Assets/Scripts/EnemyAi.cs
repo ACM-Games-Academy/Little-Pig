@@ -26,6 +26,8 @@ public class EnemyAI : MonoBehaviour
     private Animator animator;
     private float baseSpeed;
 
+    public PlayerControllerRB playerController;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -92,6 +94,8 @@ public class EnemyAI : MonoBehaviour
 
     bool CanSeePlayer()
     {
+        if (!playerController.IsStanding()) return false; // Only see player WHEN standing
+
         Vector3 direction = (player.position - transform.position).normalized;
         float distance = Vector3.Distance(transform.position, player.position);
 

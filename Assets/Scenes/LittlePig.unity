@@ -9344,7 +9344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1686391666}
-  visionRange: 0
+  visionRange: 5
   fieldOfView: 90
   chaseTimeout: 3
   chaseSpeedMultiplier: 1.2
@@ -9355,6 +9355,7 @@ MonoBehaviour:
   - {fileID: 206500762}
   - {fileID: 1503970238}
   patrolWaitTime: 2
+  playerController: {fileID: 1686391669}
 --- !u!4 &1046060189 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0c2cf077ecb52c246b8c4b4f6c4a7bc1, type: 3}
@@ -11771,6 +11772,7 @@ MonoBehaviour:
   - {fileID: 825055081}
   - {fileID: 800184999}
   patrolWaitTime: 2
+  playerController: {fileID: 1686391669}
 --- !u!1 &1355609800
 GameObject:
   m_ObjectHideFlags: 0
@@ -19264,6 +19266,7 @@ MonoBehaviour:
     m_Bits: 1
   player: {fileID: 1686391666}
   enemyAI: {fileID: 1355554780}
+  playerController: {fileID: 1686391669}
 --- !u!1001 &1989793834
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23562,6 +23565,7 @@ MonoBehaviour:
     m_Bits: 1
   player: {fileID: 1686391666}
   enemyAI: {fileID: 1046060188}
+  playerController: {fileID: 1686391669}
 --- !u!33 &7214737327919710841
 MeshFilter:
   m_ObjectHideFlags: 0
