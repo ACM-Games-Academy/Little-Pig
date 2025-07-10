@@ -8,13 +8,17 @@ public class PosterInspector : MonoBehaviour
     [Header("Poster 1")]
     public string poster1Tag = "Poster";
     public GameObject poster1ObjectToToggle;
+    public GameObject poster1Notification;
 
     [Header("Poster 2")]
     public string poster2Tag = "Poster 2";
     public GameObject poster2ObjectToToggle;
+    public GameObject poster2Notification;
 
     private GameObject currentPoster = null;
     private GameObject currentToggleObject = null;
+    private GameObject currentNotification = null;
+
     private bool isInRange = false;
     private bool isObjectActive = false;
 
@@ -23,10 +27,12 @@ public class PosterInspector : MonoBehaviour
         if (isInRange && Input.GetKeyDown(interactKey))
         {
             isObjectActive = !isObjectActive;
+
             if (currentToggleObject != null)
-            {
                 currentToggleObject.SetActive(isObjectActive);
-            }
+
+            if (currentNotification != null)
+                currentNotification.SetActive(false); // Hide the relevant notification
         }
     }
 
@@ -36,13 +42,21 @@ public class PosterInspector : MonoBehaviour
         {
             currentPoster = other.gameObject;
             currentToggleObject = poster1ObjectToToggle;
+            currentNotification = poster1Notification;
             isInRange = true;
+
+            if (currentNotification != null)
+                currentNotification.SetActive(true);
         }
         else if (other.CompareTag(poster2Tag))
         {
             currentPoster = other.gameObject;
             currentToggleObject = poster2ObjectToToggle;
+            currentNotification = poster2Notification;
             isInRange = true;
+
+            if (currentNotification != null)
+                currentNotification.SetActive(true);
         }
     }
 
@@ -56,8 +70,12 @@ public class PosterInspector : MonoBehaviour
                 isObjectActive = false;
             }
 
+            if (currentNotification != null)
+                currentNotification.SetActive(false);
+
             currentPoster = null;
             currentToggleObject = null;
+            currentNotification = null;
             isInRange = false;
         }
     }
