@@ -4,15 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Box
+  - Door
+  - PushBox
+  - Button
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - 
+  - Box
   - 
   - 
   - 
