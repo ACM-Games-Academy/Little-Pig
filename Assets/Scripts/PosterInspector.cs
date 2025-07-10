@@ -45,8 +45,6 @@ public class PosterInspector : MonoBehaviour
             currentNotification = poster1Notification;
             isInRange = true;
 
-            if (currentNotification != null)
-                currentNotification.SetActive(true);
         }
         else if (other.CompareTag(poster2Tag))
         {
@@ -55,8 +53,6 @@ public class PosterInspector : MonoBehaviour
             currentNotification = poster2Notification;
             isInRange = true;
 
-            if (currentNotification != null)
-                currentNotification.SetActive(true);
         }
     }
 
@@ -69,9 +65,6 @@ public class PosterInspector : MonoBehaviour
                 currentToggleObject.SetActive(false);
                 isObjectActive = false;
             }
-
-            if (currentNotification != null)
-                currentNotification.SetActive(false);
 
             currentPoster = null;
             currentToggleObject = null;
