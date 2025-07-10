@@ -15766,8 +15766,8 @@ MonoBehaviour:
   rightDoorAnimator: {fileID: 460280614}
   openTriggerName: Open
   closeTriggerName: Close
-  virtualCam: {fileID: 609586445}
-  player: {fileID: 1686391669}
+  virtualCam: {fileID: 0}
+  player: {fileID: 0}
   cameraOverlay: {fileID: 1506726363}
   toEnable: {fileID: 1982369740}
   openType: 1
