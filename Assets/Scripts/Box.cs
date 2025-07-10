@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class Box : MonoBehaviour
 {
+    public enum MoveAxis { X, Z }
+    [Header("Box Movement Settings")]
+    public MoveAxis movementAxis = MoveAxis.X;
+
     private Rigidbody rb;
 
     private void Start()
@@ -18,11 +22,11 @@ public class Box : MonoBehaviour
             {
                 if (player.IsStanding())
                 {
-                    LockToX(false); // allow X movement
+                    LockToAxis(false); // allow movement if standing
                 }
                 else
                 {
-                    LockToX(true); // freeze all movement if crouching
+                    LockToAxis(true); // freeze all movement if NOT standing
                 }
             }
         }
@@ -32,22 +36,31 @@ public class Box : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
-            // Optional: re-lock movement when no longer in contact
-            LockToX(true);
+            LockToAxis(true); // re-lock when player leaves
         }
     }
 
-    private void LockToX(bool freeze)
+    private void LockToAxis(bool freeze)
     {
         if (freeze)
         {
-            rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
+            rb.constraints = RigidbodyConstraints.FreezeAll;
         }
         else
         {
-            rb.constraints = RigidbodyConstraints.FreezePositionY |
-                             RigidbodyConstraints.FreezePositionZ |
-                             RigidbodyConstraints.FreezeRotation;
+            switch (movementAxis)
+            {
+                case MoveAxis.X:
+                    rb.constraints = RigidbodyConstraints.FreezePositionY |
+                                     RigidbodyConstraints.FreezePositionZ |
+                                     RigidbodyConstraints.FreezeRotation;
+                    break;
+                case MoveAxis.Z:
+                    rb.constraints = RigidbodyConstraints.FreezePositionY |
+                                     RigidbodyConstraints.FreezePositionX |
+                                     RigidbodyConstraints.FreezeRotation;
+                    break;
+            }
         }
     }
 }
