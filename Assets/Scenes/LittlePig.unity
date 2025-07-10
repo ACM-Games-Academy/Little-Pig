@@ -1237,7 +1237,7 @@ GameObject:
   - component: {fileID: 97196231}
   - component: {fileID: 97196230}
   - component: {fileID: 97196229}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Bottom Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4441,7 +4441,7 @@ GameObject:
   - component: {fileID: 443324088}
   - component: {fileID: 443324087}
   - component: {fileID: 443324086}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: R Doorknob Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5931,7 +5931,7 @@ GameObject:
   - component: {fileID: 584086200}
   - component: {fileID: 584086199}
   - component: {fileID: 584086198}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Right Wall 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7891,7 +7891,7 @@ GameObject:
   - component: {fileID: 765547730}
   - component: {fileID: 765547729}
   - component: {fileID: 765547728}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: L Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8174,7 +8174,7 @@ GameObject:
   - component: {fileID: 799985007}
   - component: {fileID: 799985006}
   - component: {fileID: 799985005}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Bottom Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8441,7 +8441,7 @@ GameObject:
   - component: {fileID: 822898198}
   - component: {fileID: 822898197}
   - component: {fileID: 822898196}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: L Doorknob Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8577,7 +8577,7 @@ GameObject:
   - component: {fileID: 826959614}
   - component: {fileID: 826959613}
   - component: {fileID: 826959612}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: R Doorknob Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13274,7 +13274,7 @@ MonoBehaviour:
   - {fileID: 825055081}
   - {fileID: 800184999}
   patrolWaitTime: 2
-  playerController: {fileID: 0}
+  playerController: {fileID: 1686391669}
 --- !u!1 &1355609800
 GameObject:
   m_ObjectHideFlags: 0
@@ -15769,7 +15769,7 @@ MonoBehaviour:
   virtualCam: {fileID: 0}
   player: {fileID: 0}
   cameraOverlay: {fileID: 1506726363}
-  toEnable: {fileID: 1982369740}
+  toEnable: {fileID: 0}
   openType: 1
 --- !u!65 &1567504625
 BoxCollider:
@@ -17293,7 +17293,7 @@ GameObject:
   - component: {fileID: 1745888242}
   - component: {fileID: 1745888241}
   - component: {fileID: 1745888240}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: L Doorknob Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19952,7 +19952,7 @@ GameObject:
   - component: {fileID: 1948785527}
   - component: {fileID: 1948785526}
   - component: {fileID: 1948785525}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: R Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
