@@ -7740,7 +7740,9 @@ MonoBehaviour:
   closeTriggerName: Close
   virtualCam: {fileID: 609586445}
   player: {fileID: 1686391669}
+  cameraOverlay: {fileID: 0}
   toEnable: {fileID: 1355554776}
+  openType: 0
 --- !u!1 &730898674 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4d410adb23fe6954590286e952d53028, type: 3}
@@ -10617,6 +10619,7 @@ MonoBehaviour:
   - {fileID: 206500762}
   - {fileID: 1503970238}
   patrolWaitTime: 2
+  playerController: {fileID: 1686391669}
 --- !u!4 &1046060189 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0c2cf077ecb52c246b8c4b4f6c4a7bc1, type: 3}
@@ -11579,17 +11582,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1176426628}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1189755296}
+  m_Father: {fileID: 1506726364}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1205, y: 605}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1176426630
 MonoBehaviour:
@@ -11933,8 +11936,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1418160350}
-  - {fileID: 1176426629}
+  - {fileID: 1506726364}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -13272,6 +13274,7 @@ MonoBehaviour:
   - {fileID: 825055081}
   - {fileID: 800184999}
   patrolWaitTime: 2
+  playerController: {fileID: 0}
 --- !u!1 &1355609800
 GameObject:
   m_ObjectHideFlags: 0
@@ -14407,17 +14410,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1418160349}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1189755296}
+  m_Father: {fileID: 1506726364}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1205, y: 605}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1418160351
 MonoBehaviour:
@@ -15111,6 +15114,43 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1271181041}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1506726363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1506726364}
+  m_Layer: 5
+  m_Name: Camera Overlay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1506726364
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506726363}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1418160350}
+  - {fileID: 1176426629}
+  m_Father: {fileID: 1189755296}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1511861611 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4613398193747785765, guid: f37baee97bd1cda489629678ef9bdcba, type: 3}
@@ -15726,9 +15766,11 @@ MonoBehaviour:
   rightDoorAnimator: {fileID: 460280614}
   openTriggerName: Open
   closeTriggerName: Close
-  virtualCam: {fileID: 0}
-  player: {fileID: 0}
-  toEnable: {fileID: 0}
+  virtualCam: {fileID: 609586445}
+  player: {fileID: 1686391669}
+  cameraOverlay: {fileID: 1506726363}
+  toEnable: {fileID: 1982369740}
+  openType: 1
 --- !u!65 &1567504625
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15748,8 +15790,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.8464766, y: 1, z: 1.7264788}
-  m_Center: {x: -0.2636261, y: 0, z: -0.012238026}
+  m_Size: {x: 0.71649647, y: 1, z: 1.7264788}
+  m_Center: {x: 0.30136395, y: 0, z: -0.012238026}
 --- !u!1 &1576851554 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2601969958439421057, guid: 4f0be1973c331f84eaff2387b4f43e72, type: 3}
@@ -20820,6 +20862,7 @@ MonoBehaviour:
     m_Bits: 1
   player: {fileID: 1686391666}
   enemyAI: {fileID: 1355554780}
+  playerController: {fileID: 1686391669}
 --- !u!1001 &1989538434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25249,6 +25292,7 @@ MonoBehaviour:
     m_Bits: 1
   player: {fileID: 1686391666}
   enemyAI: {fileID: 1046060188}
+  playerController: {fileID: 1686391669}
 --- !u!33 &7214737327919710841
 MeshFilter:
   m_ObjectHideFlags: 0

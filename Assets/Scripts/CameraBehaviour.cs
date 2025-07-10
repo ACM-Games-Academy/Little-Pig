@@ -19,6 +19,8 @@ public class CameraBehaviour : MonoBehaviour
     private bool rotatingRight = true;
     private bool isPaused = false;
 
+    public PlayerControllerRB playerController;
+
     void Start()
     {
         initialYRotation = transform.eulerAngles.y;
@@ -58,6 +60,8 @@ public class CameraBehaviour : MonoBehaviour
 
     void CheckVision()
     {
+        if (playerController.IsStanding()) return; // Only see player when NOT standing
+
         Vector3 direction = (player.position - transform.position).normalized;
         float distance = Vector3.Distance(transform.position, player.position);
 

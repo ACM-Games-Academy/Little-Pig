@@ -105,11 +105,13 @@ public class PlayerControllerRB : MonoBehaviour
 
         animator.SetFloat("moveSpeed", speedPercent);
 
-        bool standKeyHeld = Input.GetKey(KeyCode.LeftControl);
-        bool runKeyHeld = Input.GetKey(KeyCode.LeftShift);
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            isStanding = !isStanding;
+            animator.SetBool("isStanding", isStanding);
+        }
 
-        isStanding = standKeyHeld;
-        animator.SetBool("isStanding", isStanding);
+        bool runKeyHeld = Input.GetKey(KeyCode.LeftShift);
 
         // Movement Speed Logic:
         if (isStanding)
@@ -140,7 +142,7 @@ public class PlayerControllerRB : MonoBehaviour
 
     private void HandleJump()
     {
-        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
+        if (isGrounded && !isStanding && Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("Jump triggered");
             float jumpVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
