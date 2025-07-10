@@ -7,6 +7,8 @@ TagManager:
   - Door
   - PushBox
   - Button
+  - Poster
+  - Poster 2
   layers:
   - Default
   - TransparentFX
