@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: db83c8dce02c7147bce02adbb781cb8a
     GuidInternal: 
-    m_lastTime: -8584500657805930477
+    m_lastTime: -8584494361119148566
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: f65a0f26efea7c4397d98b3413caf075
     GuidInternal: 
-    m_lastTime: -8584500657808116681
+    m_lastTime: -8584494361123077008
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 698df4136614314b89a384fd87e3a153
     GuidInternal: 
-    m_lastTime: -8584500633575138880
+    m_lastTime: -8584494361119220235
     List:
     - name: Main
       guid: 03c962c179d0404d97a9253836233bc9
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a92de4ecabd44d4bb57ca09eb2069224
     GuidInternal: 
-    m_lastTime: -8584500633575619899
+    m_lastTime: -8584494361129278449
     List:
     - name: Play_Ambient_Music_FIN
       guid: 6b5ae2f8a1c5244594a7ff82a17a3b52
@@ -111,8 +111,8 @@ MonoBehaviour:
         guid: 6b5ae2f8a1c5244594a7ff82a17a3b52
       Path: Events\Default Work Unit\Play_Ambient_Music_FIN
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Ambient_Noise
       guid: 1e0cd1e40054084c815d9bbcead9f92b
       id: 463827929
@@ -128,8 +128,8 @@ MonoBehaviour:
         guid: 1e0cd1e40054084c815d9bbcead9f92b
       Path: Events\Default Work Unit\Play_Ambient_Noise
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Concrete_Butcher_Footsteps
       guid: d6099019ad52794b92dfdf9bbb72182f
       id: 4054536619
@@ -144,9 +144,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: d6099019ad52794b92dfdf9bbb72182f
       Path: Events\Default Work Unit\Play_Concrete_Butcher_Footsteps
-      maxAttenuation: 10
-      maxDuration: 0
-      minDuration: 0
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -159,7 +159,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 135b20c845247f4faa67a2eb618d56a5
     GuidInternal: 
-    m_lastTime: -8584500657807771472
+    m_lastTime: -8584494361129245223
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -173,7 +173,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: e09115ff63389b48ae1deed1f65cf4e9
     GuidInternal: 
-    m_lastTime: -8584500657804829961
+    m_lastTime: -8584494361119190241
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -187,7 +187,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 3b8b8ded2a5abf4eb557fee20730eb23
     GuidInternal: 
-    m_lastTime: -8584500657807056246
+    m_lastTime: -8584494361119190241
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -201,7 +201,7 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: af42abb0a0b25b4781b8a68b15648079
     GuidInternal: 
-    m_lastTime: -8584500657805365240
+    m_lastTime: -8584494361119168689
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 06000000070000003d0000003e0000003f0000009200000093000000
