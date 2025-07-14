@@ -70,7 +70,7 @@ public class CameraBehaviour : MonoBehaviour
         float angle = Vector3.Angle(transform.forward, direction);
         if (angle > fieldOfView * 0.5f) return;
 
-        Vector3 origin = transform.position + Vector3.up * 1.2f;
+        Vector3 origin = transform.position + Vector3.up;
         Vector3 target = player.position + Vector3.up * 0.3f;
 
         if (Physics.Raycast(origin, (target - origin), out RaycastHit hit, visionRange, visionMask))
