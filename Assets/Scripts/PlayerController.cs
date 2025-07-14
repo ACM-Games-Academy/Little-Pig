@@ -7,6 +7,7 @@ public class PlayerControllerRB : MonoBehaviour
     [Header("References")]
     public Transform cameraTransform; // Reference to camera for movement direction
     public Transform model;           // Reference to player model for visual rotation
+    private DeathScreen DS;
 
     [Header("Movement")]
     public float walkSpeed = 4f;
@@ -29,7 +30,9 @@ public class PlayerControllerRB : MonoBehaviour
     private Vector3 velocity;
     private float currentSpeed;
     private float turnSmoothVelocity;
-    
+
+    private bool isDead = false;
+
     [Header("Ground Check")]
     private bool isGrounded;
     public LayerMask groundLayer;
@@ -57,6 +60,8 @@ public class PlayerControllerRB : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         col = GetComponent<CapsuleCollider>();
+
+        DS = FindObjectOfType<DeathScreen>();
 
         // Start in Standing position and lying down
         model.localRotation = Quaternion.Euler(0f, 180f, 0f);
@@ -254,6 +259,24 @@ public class PlayerControllerRB : MonoBehaviour
         }
     }
 
+    public void Die()
+    {
+        if (isDead) return;
+
+        isDead = true;
+        Debug.Log("Player has died.");
+
+        if (isDead == true)
+        {
+            Debug.Log("DS script entered");
+            DS.ShowDeathScreen();
+        }
+
+        animator.SetTrigger("die");
+        rb.velocity = Vector3.zero;
+        rb.isKinematic = true;
+        this.enabled = false;
+    }
 
     public void SavePlayer()
     {

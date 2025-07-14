@@ -12,7 +12,7 @@ public class EnemyAI : MonoBehaviour
 
     [Header("Chase")]
     public float chaseTimeout = 5f;
-    public float chaseSpeedMultiplier = 1.2f; // <-- New multiplier
+    public float chaseSpeedMultiplier = 1.2f;
 
     [Header("Patrol")]
     public Transform[] patrolPoints;
@@ -83,6 +83,12 @@ public class EnemyAI : MonoBehaviour
         // Set animation and speed state
         animator.SetBool("chasing", isChasing);
         agent.speed = isChasing ? baseSpeed * chaseSpeedMultiplier : baseSpeed;
+
+        // Check for player caught
+        if (isChasing && Vector3.Distance(transform.position, player.position) < 1.2f)
+        {
+            playerController.Die();
+        }
     }
 
     public void Alert(Vector3 position)
@@ -94,7 +100,7 @@ public class EnemyAI : MonoBehaviour
 
     bool CanSeePlayer()
     {
-        if (!playerController.IsStanding()) return false; // Only see player WHEN standing
+        if (!playerController.IsStanding()) return false;
 
         Vector3 direction = (player.position - transform.position).normalized;
         float distance = Vector3.Distance(transform.position, player.position);
