@@ -1,7 +1,8 @@
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class MenuController : MonoBehaviour
     public Button XButton;
     public Button PlayButton;
     public Button QuitButton;
+    public GameObject MenuButtons;
 
     private void Start()
     {
@@ -50,6 +52,9 @@ public class MenuController : MonoBehaviour
     IEnumerator PlayCoroutine()
     {
         Debug.Log("Loading scene...");
+
+        MenuButtons.SetActive(false);
+
         Color fadeColor = fadeUI.color;
         fadeColor.a = 0f;
         fadeUI.color = fadeColor;
