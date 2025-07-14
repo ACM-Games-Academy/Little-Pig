@@ -1,12 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 public class CameraBehaviour : MonoBehaviour
 {
     [Header("Sweep Settings")]
     public float rotationSpeed = 30f;
     public float maxRotationAngle = 45f;
+    public float pauseDuration = 1f;
 
     [Header("Vision")]
     public float visionRange = 15f;
@@ -17,37 +17,51 @@ public class CameraBehaviour : MonoBehaviour
 
     private float initialYRotation;
     private bool rotatingRight = true;
+    private bool isPaused = false;
+
+    public PlayerControllerRB playerController;
 
     void Start()
     {
         initialYRotation = transform.eulerAngles.y;
+        StartCoroutine(SweepCoroutine());
     }
 
     void Update()
     {
-        Sweep();
         CheckVision();
     }
 
-    void Sweep()
+    IEnumerator SweepCoroutine()
     {
-        float angle = rotationSpeed * Time.deltaTime;
-        if (rotatingRight)
-            transform.Rotate(0, angle, 0);
-        else
-            transform.Rotate(0, -angle, 0);
-
-        float currentYRotation = transform.eulerAngles.y;
-        float deltaAngle = Mathf.DeltaAngle(initialYRotation, currentYRotation);
-
-        if (Mathf.Abs(deltaAngle) >= maxRotationAngle)
+        while (true)
         {
-            rotatingRight = !rotatingRight;
+            if (!isPaused)
+            {
+                float angle = rotationSpeed * Time.deltaTime;
+                transform.Rotate(0, rotatingRight ? angle : -angle, 0);
+
+                float currentYRotation = transform.eulerAngles.y;
+                float deltaAngle = Mathf.DeltaAngle(initialYRotation, currentYRotation);
+
+                if (Mathf.Abs(deltaAngle) >= maxRotationAngle)
+                {
+                    isPaused = true;
+                    rotatingRight = !rotatingRight;
+                    yield return new WaitForSeconds(pauseDuration);
+                    initialYRotation = transform.eulerAngles.y; // Reset base rotation
+                    isPaused = false;
+                }
+            }
+
+            yield return null;
         }
     }
 
     void CheckVision()
     {
+        if (playerController.IsStanding()) return; // Only see player when NOT standing
+
         Vector3 direction = (player.position - transform.position).normalized;
         float distance = Vector3.Distance(transform.position, player.position);
 
@@ -64,14 +78,13 @@ public class CameraBehaviour : MonoBehaviour
             if (hit.transform == player)
             {
                 Debug.Log("Camera spotted player!");
-                enemyAI.Alert(player.position); // Notify enemy
+                enemyAI.Alert(player.position);
             }
         }
 
         Debug.DrawRay(origin, (target - origin).normalized * visionRange, Color.red);
     }
 
-    // Visual cone in Scene view
     void OnDrawGizmos()
     {
         if (!Application.isPlaying) return;

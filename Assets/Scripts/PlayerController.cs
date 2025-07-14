@@ -13,9 +13,10 @@ public class PlayerControllerRB : MonoBehaviour
     public float runSpeed = 8f;
     public float StandingSpeed = 2f;
     public float jumpHeight = 1.2f;
-    public float gravity = -9.81f;
     public float turnSmoothTime = 0.1f;
     public float acceleration = 10f;
+    private float gravity => Physics.gravity.y;
+
 
     [Header("Standing")]
     public float standingHeight = 2f;
@@ -28,7 +29,29 @@ public class PlayerControllerRB : MonoBehaviour
     private Vector3 velocity;
     private float currentSpeed;
     private float turnSmoothVelocity;
+    
+    [Header("Ground Check")]
     private bool isGrounded;
+    public LayerMask groundLayer;
+
+    [Header("Camera Offset")]
+    public float rotationOffset = 0f;
+
+    [Header("Animation")]
+    public Animator animator;
+    private bool isStanding;
+    private bool isPushing;
+
+
+    public bool IsGrounded()
+    {
+        return isGrounded;
+    }
+
+    public bool IsStanding()
+    {
+        return isStanding;
+    }
 
     private void Start()
     {
@@ -36,7 +59,7 @@ public class PlayerControllerRB : MonoBehaviour
         col = GetComponent<CapsuleCollider>();
 
         // Start in Standing position and lying down
-        model.localRotation = Quaternion.Euler(0f, 0f, 90f);
+        model.localRotation = Quaternion.Euler(0f, 180f, 0f);
         col.height = StandingingHeight;
         col.center = new Vector3(0f, StandingingHeight / 2f, 0f);
 
@@ -46,7 +69,6 @@ public class PlayerControllerRB : MonoBehaviour
     private void Update()
     {
         HandleInput();
-        HandleStanding();
         HandleJump();
 
         if (Input.GetKeyDown(KeyCode.F5)) SavePlayer();
@@ -57,7 +79,6 @@ public class PlayerControllerRB : MonoBehaviour
     {
         HandleGroundCheck();
         ApplyMovement();
-        ApplyGravity();
     }
 
     private void HandleInput()
@@ -65,8 +86,8 @@ public class PlayerControllerRB : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveZ = Input.GetAxisRaw("Vertical");
 
-        Vector3 camForward = cameraTransform.forward;
-        Vector3 camRight = cameraTransform.right;
+        Vector3 camForward = cameraTransform.rotation * Vector3.forward;
+        Vector3 camRight = cameraTransform.rotation * Vector3.right;
 
         camForward.y = 0f;
         camRight.y = 0f;
@@ -74,30 +95,56 @@ public class PlayerControllerRB : MonoBehaviour
         camRight.Normalize();
 
         inputDirection = (camForward * moveZ + camRight * moveX).normalized;
-    }
 
-    private void HandleStanding()
-    {
-        if (Input.GetKey(KeyCode.LeftControl))
+        float speedPercent = 0f;
+
+        if (inputDirection.magnitude >= 0.1f)
         {
-            currentSpeed = StandingSpeed;
-            col.height = StandingingHeight;
-            col.center = new Vector3(0f, StandingingHeight / 2f, 0f);
-            model.localRotation = Quaternion.Euler(0f, 0f, 0f);
+            speedPercent = 0.3f;
+        }
+
+        animator.SetFloat("moveSpeed", speedPercent);
+
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            isStanding = !isStanding;
+            animator.SetBool("isStanding", isStanding);
+        }
+
+        bool runKeyHeld = Input.GetKey(KeyCode.LeftShift);
+
+        // Movement Speed Logic:
+        if (isStanding)
+        {
+            currentSpeed = StandingSpeed; // Slowest speed when standing up
+        }
+        else if (runKeyHeld)
+        {
+            currentSpeed = runSpeed; // Fastest
         }
         else
         {
-            currentSpeed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;
+            currentSpeed = walkSpeed; // Normal walking speed
+        }
+
+        // Adjust collider height for standing:
+        if (isStanding)
+        {
             col.height = standingHeight;
             col.center = new Vector3(0f, standingHeight / 2f, 0f);
-            model.localRotation = Quaternion.Euler(0f, 0f, 90f);
+        }
+        else
+        {
+            col.height = StandingingHeight;
+            col.center = new Vector3(0f, StandingingHeight / 2f, 0f);
         }
     }
 
     private void HandleJump()
     {
-        if (isGrounded && Input.GetButtonDown("Jump"))
+        if (isGrounded && !isStanding && Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log("Jump triggered");
             float jumpVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
             rb.velocity = new Vector3(rb.velocity.x, jumpVelocity, rb.velocity.z);
         }
@@ -105,8 +152,18 @@ public class PlayerControllerRB : MonoBehaviour
 
     private void HandleGroundCheck()
     {
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, col.bounds.extents.y + 0.1f);
+        // Calculate the bottom point of the capsule
+        Vector3 bottom = transform.position + Vector3.up * 0.1f;
+        Vector3 top = bottom + Vector3.up * (col.height - col.radius * 2f);
+
+        // Slightly shrink the radius to avoid false positives
+        float radius = col.radius * 0.95f;
+
+        isGrounded = Physics.CheckCapsule(top, bottom, radius, groundLayer, QueryTriggerInteraction.Ignore);
+
+        Debug.DrawLine(bottom, top, isGrounded ? Color.green : Color.red);
     }
+
 
     private void ApplyMovement()
     {
@@ -122,19 +179,81 @@ public class PlayerControllerRB : MonoBehaviour
         // Smoothly rotate player towards movement direction
         if (inputDirection.magnitude >= 0.1f)
         {
-            float targetAngle = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y;
+            float targetAngle = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg + cameraTransform.eulerAngles.y + rotationOffset;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
         }
     }
 
-    private void ApplyGravity()
+    private void OnTriggerEnter(Collider other)
     {
-        if (!isGrounded)
+        if (other.CompareTag("Door"))
         {
-            rb.velocity += Vector3.up * gravity * Time.fixedDeltaTime;
+            DoorController door = other.GetComponent<DoorController>();
+            if (door != null)
+            {
+                door.OpenDoor();
+            }
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Door"))
+        {
+            DoorController door = other.GetComponent<DoorController>();
+            if (door != null)
+            {
+                door.CloseDoor();
+            }
+        }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.collider.CompareTag("PushBox"))
+        {
+            if (!isStanding)
+            {
+                if (isPushing)
+                {
+                    isPushing = false;
+                    animator.SetBool("isPushing", false);
+                }
+                return;
+            }
+
+            float moveSpeed = animator.GetFloat("moveSpeed");
+
+            // If moveSpeed indicates movement and we're standing near a box
+            if (moveSpeed > 0.05f)
+            {
+                if (!isPushing)
+                {
+                    isPushing = true;
+                    animator.SetBool("isPushing", true);
+                }
+            }
+            else
+            {
+                if (isPushing)
+                {
+                    isPushing = false;
+                    animator.SetBool("isPushing", false);
+                }
+            }
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.collider.CompareTag("PushBox"))
+        {
+            isPushing = false;
+            animator.SetBool("isPushing", false);
+        }
+    }
+
 
     public void SavePlayer()
     {
