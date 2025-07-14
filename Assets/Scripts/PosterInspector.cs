@@ -4,6 +4,7 @@ public class PosterInspector : MonoBehaviour
 {
     [Header("Interaction Settings")]
     public KeyCode interactKey = KeyCode.E;
+    public GameObject interactText;
 
     [Header("Poster 1")]
     public string poster1Tag = "Poster";
@@ -32,7 +33,11 @@ public class PosterInspector : MonoBehaviour
                 currentToggleObject.SetActive(isObjectActive);
 
             if (currentNotification != null)
-                currentNotification.SetActive(false); // Hide the relevant notification
+                currentNotification.SetActive(false);
+
+            // Hide interact text when inspecting, show again if closing while in range
+            if (interactText != null)
+                interactText.SetActive(!isObjectActive);
         }
     }
 
@@ -44,7 +49,6 @@ public class PosterInspector : MonoBehaviour
             currentToggleObject = poster1ObjectToToggle;
             currentNotification = poster1Notification;
             isInRange = true;
-
         }
         else if (other.CompareTag(poster2Tag))
         {
@@ -52,8 +56,11 @@ public class PosterInspector : MonoBehaviour
             currentToggleObject = poster2ObjectToToggle;
             currentNotification = poster2Notification;
             isInRange = true;
-
         }
+
+        // Only show interact text if not inspecting
+        if (isInRange && interactText != null && !isObjectActive)
+            interactText.SetActive(true);
     }
 
     private void OnTriggerExit(Collider other)
@@ -65,6 +72,9 @@ public class PosterInspector : MonoBehaviour
                 currentToggleObject.SetActive(false);
                 isObjectActive = false;
             }
+
+            if (interactText != null)
+                interactText.SetActive(false);
 
             currentPoster = null;
             currentToggleObject = null;
