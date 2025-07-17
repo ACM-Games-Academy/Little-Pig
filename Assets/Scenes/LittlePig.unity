@@ -492,7 +492,7 @@ GameObject:
   - component: {fileID: 52884638}
   - component: {fileID: 52884637}
   m_Layer: 0
-  m_Name: Blood Puddle
+  m_Name: Blood Splatter Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4081,14 +4081,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2037468481}
     m_Modifications:
-    - target: {fileID: 3566390031902043909, guid: 9475921c2d6dbbd41981b51f2250bdf7, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 797fcd096cf765449b1dd61fafecb59d, type: 2}
-    - target: {fileID: 8032750206264916975, guid: 9475921c2d6dbbd41981b51f2250bdf7, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 576b926472b9b1241851436a0ac904da, type: 2}
     - target: {fileID: -8679921383154817045, guid: 4ba92a0776ae9ef45bcabe71817f2f3c, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -4157,6 +4149,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fd9955d3f07276144a75e95e36f2ab59, type: 2}
+    - target: {fileID: 3566390031902043909, guid: 9475921c2d6dbbd41981b51f2250bdf7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 797fcd096cf765449b1dd61fafecb59d, type: 2}
+    - target: {fileID: 8032750206264916975, guid: 9475921c2d6dbbd41981b51f2250bdf7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 576b926472b9b1241851436a0ac904da, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6217,14 +6217,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 620015342}
     m_Modifications:
-    - target: {fileID: 8032750206264916975, guid: c5f397f8c95e9b74badb37eb3942e826, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 19d2970185621ed469e275f1a623fcdc, type: 2}
-    - target: {fileID: 8084854973141751649, guid: c5f397f8c95e9b74badb37eb3942e826, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 797fcd096cf765449b1dd61fafecb59d, type: 2}
     - target: {fileID: -8679921383154817045, guid: d0552d23409627d4da7edc2fcc9e98ba, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.01
@@ -6294,6 +6286,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: fd9955d3f07276144a75e95e36f2ab59, type: 2}
     - target: {fileID: 8084854973141751649, guid: d0552d23409627d4da7edc2fcc9e98ba, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 797fcd096cf765449b1dd61fafecb59d, type: 2}
+    - target: {fileID: 8032750206264916975, guid: c5f397f8c95e9b74badb37eb3942e826, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 19d2970185621ed469e275f1a623fcdc, type: 2}
+    - target: {fileID: 8084854973141751649, guid: c5f397f8c95e9b74badb37eb3942e826, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 797fcd096cf765449b1dd61fafecb59d, type: 2}
@@ -7812,6 +7812,8 @@ Transform:
   - {fileID: 72237605}
   - {fileID: 149456842}
   - {fileID: 1802290556}
+  - {fileID: 1820501530}
+  - {fileID: 1338294672}
   - {fileID: 2145373346}
   - {fileID: 616438638}
   - {fileID: 1542213638}
@@ -7821,6 +7823,7 @@ Transform:
   - {fileID: 2060329895}
   - {fileID: 543450651855253805}
   - {fileID: 543450652356758907}
+  - {fileID: 1796004944}
   - {fileID: 674244173}
   - {fileID: 509863163}
   - {fileID: 1989793835}
@@ -8212,13 +8215,42 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 11f4ecb4aaf00104c9c8a776f2f82ce6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1202441731}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 11f4ecb4aaf00104c9c8a776f2f82ce6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 674244175}
   m_SourcePrefab: {fileID: 100100000, guid: 11f4ecb4aaf00104c9c8a776f2f82ce6, type: 3}
 --- !u!4 &674244173 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 11f4ecb4aaf00104c9c8a776f2f82ce6, type: 3}
   m_PrefabInstance: {fileID: 674244172}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &674244174 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 11f4ecb4aaf00104c9c8a776f2f82ce6, type: 3}
+  m_PrefabInstance: {fileID: 674244172}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &674244175
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674244174}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 199.97708, y: 79.98841, z: 99.86187}
+  m_Center: {x: -0.0364244, y: 40.012707, z: 0.017565489}
 --- !u!1 &692447197 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8578827625446800467, guid: 1e474c8af879104459217aa04d4b878b, type: 3}
@@ -15103,6 +15135,112 @@ Transform:
   - {fileID: 1614059600}
   m_Father: {fileID: 1122668345}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1338294668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1338294672}
+  - component: {fileID: 1338294671}
+  - component: {fileID: 1338294670}
+  - component: {fileID: 1338294669}
+  m_Layer: 0
+  m_Name: Blood Splatter Floor 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &1338294669
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338294668}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1338294670
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338294668}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 133f170e37832ae4ea1b87328c9c4b52, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1338294671
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338294668}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1338294672
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338294668}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.9829556, z: -0, w: -0.18384334}
+  m_LocalPosition: {x: -10.938001, y: 0.01, z: -0.6129992}
+  m_LocalScale: {x: 0.28123754, y: 0.28123748, z: 0.28123754}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 620015342}
+  m_LocalEulerAnglesHint: {x: 0, y: 201.187, z: 0}
 --- !u!1 &1355554776 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c2cf077ecb52c246b8c4b4f6c4a7bc1, type: 3}
@@ -18843,7 +18981,7 @@ GameObject:
   - component: {fileID: 1629390126}
   - component: {fileID: 1629390125}
   m_Layer: 0
-  m_Name: Blood Splatter
+  m_Name: Blood Splatter Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20698,6 +20836,112 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1796004943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1796004944}
+  - component: {fileID: 1796004947}
+  - component: {fileID: 1796004946}
+  - component: {fileID: 1796004945}
+  m_Layer: 0
+  m_Name: Blood Splatter Wall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1796004944
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796004943}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.18289945, y: -0.18289945, z: -0.68304306, w: 0.68304306}
+  m_LocalPosition: {x: -11.79, y: 0.695, z: 1.994}
+  m_LocalScale: {x: 0.17424999, y: 0.17424998, z: 0.17424998}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 620015342}
+  m_LocalEulerAnglesHint: {x: -29.981, y: 0, z: -90}
+--- !u!64 &1796004945
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796004943}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1796004946
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796004943}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: e48e8ca0b0abc804abb6c9afbb19f94b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1796004947
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796004943}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1802290555
 GameObject:
   m_ObjectHideFlags: 0
@@ -21264,6 +21508,112 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1820501526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1820501530}
+  - component: {fileID: 1820501529}
+  - component: {fileID: 1820501528}
+  - component: {fileID: 1820501527}
+  m_Layer: 0
+  m_Name: Blood Splatter Floor 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &1820501527
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820501526}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1820501528
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820501526}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 50b2992da630dcc4f9257fe86f5e0d62, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1820501529
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820501526}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1820501530
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820501526}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.71127367, z: -0, w: 0.7029153}
+  m_LocalPosition: {x: -11.214, y: 0.01, z: -2.041999}
+  m_LocalScale: {x: 0.226464, y: 0.226464, z: 0.226464}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 620015342}
+  m_LocalEulerAnglesHint: {x: 0, y: 90.677, z: 0}
 --- !u!1 &1822007856
 GameObject:
   m_ObjectHideFlags: 0
@@ -27481,6 +27831,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543450652356758907}
+  - component: {fileID: 919132148351211458}
   m_Layer: 0
   m_Name: Whetstone Spinning Wheel
   m_TagString: Untagged
@@ -27488,6 +27839,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &919132148351211458
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148351211457}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 101.05095, y: 179.18776, z: 55.07679}
+  m_Center: {x: -0.0005722046, y: 89.57233, z: 0.050258636}
 --- !u!33 &1254905611393469491
 MeshFilter:
   m_ObjectHideFlags: 0
