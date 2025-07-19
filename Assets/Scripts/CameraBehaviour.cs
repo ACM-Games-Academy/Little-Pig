@@ -106,11 +106,12 @@ public class CameraBehaviour : MonoBehaviour
         float height = visionRange;
 
         col.radius = radius - 0.55f;
-        col.height = height - 2f; 
+        col.height = height - 2f;
+        col.direction = 2; 
 
         triggerObj.transform.localPosition = new Vector3(0, 1.2f, 464.8f);
 
-        // Add the trigger logic script to the new empty gameobject
+        // Add the trigger logic script to new gameobject
         VisionTrigger triggerScript = triggerObj.AddComponent<VisionTrigger>();
         triggerScript.player = player;
         triggerScript.enemyAI = enemyAI;
