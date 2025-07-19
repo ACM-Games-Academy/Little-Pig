@@ -230,7 +230,6 @@ public class PlayerControllerRB : MonoBehaviour
 
             float moveSpeed = animator.GetFloat("moveSpeed");
 
-            // If moveSpeed indicates movement and we're standing near a box
             if (moveSpeed > 0.05f)
             {
                 if (!isPushing)
