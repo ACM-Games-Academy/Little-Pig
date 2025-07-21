@@ -775,7 +775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 183efaee56c02ba4dbae9d0d9d177b46, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19377,7 +19377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1686391666}
-  visionRange: 3
+  visionRange: 4
   fieldOfView: 90
   chaseTimeout: 3
   chaseSpeedMultiplier: 1.2
@@ -20404,6 +20404,18 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 183efaee56c02ba4dbae9d0d9d177b46, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1638344058413058639, guid: 183efaee56c02ba4dbae9d0d9d177b46, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.00014
+      objectReference: {fileID: 0}
+    - target: {fileID: -1638344058413058639, guid: 183efaee56c02ba4dbae9d0d9d177b46, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.00117
+      objectReference: {fileID: 0}
+    - target: {fileID: -1638344058413058639, guid: 183efaee56c02ba4dbae9d0d9d177b46, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00041
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 183efaee56c02ba4dbae9d0d9d177b46, type: 3}
       propertyPath: m_Name
@@ -29242,7 +29254,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   player: {fileID: 1686391666}
-  enemyAI: {fileID: 0}
+  enemyAI: {fileID: 1661466158}
   playerController: {fileID: 1686391669}
 --- !u!33 &7217449712438916155
 MeshFilter:
