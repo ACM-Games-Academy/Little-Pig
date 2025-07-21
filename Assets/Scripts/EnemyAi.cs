@@ -156,6 +156,12 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
+    void OnTriggerExit(Collider other)
+    {
+        // These are no longer needed to stop the action;
+        // animations now control when the bools reset.
+    }
+
     public void OnInspectFinished()
     {
         animator.SetBool("IsInspecting", false);
