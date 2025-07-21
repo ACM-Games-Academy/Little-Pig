@@ -899,6 +899,7 @@ MonoBehaviour:
   XButton: {fileID: 1560822742}
   PlayButton: {fileID: 312941220}
   QuitButton: {fileID: 13239097}
+  MenuButtons: {fileID: 1697269585}
 --- !u!4 &1179031414
 Transform:
   m_ObjectHideFlags: 0

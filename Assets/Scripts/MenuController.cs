@@ -1,10 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using Unity.VisualScripting;
-using JetBrains.Annotations;
+using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
 {
@@ -18,9 +16,9 @@ public class MenuController : MonoBehaviour
     public Button XButton;
     public Button PlayButton;
     public Button QuitButton;
-    //public LayerMask FadeLayer;
+    public GameObject MenuButtons;
 
-    public void Start()
+    private void Start()
     {
         if (fadeUI != null)
         {
@@ -29,16 +27,9 @@ public class MenuController : MonoBehaviour
             fadeUI.color = c;
         }
 
-        CtrlButton.GetComponent<Button>();
         CtrlButton.onClick.AddListener(TaskOnClick);
-
-        XButton.GetComponent<Button>();
         XButton.onClick.AddListener(ControlsExit);
-
-        PlayButton.GetComponent<Button>();
         PlayButton.onClick.AddListener(Play);
-
-        QuitButton.GetComponent<Button>();
         QuitButton.onClick.AddListener(Quit);
     }
 
@@ -53,39 +44,34 @@ public class MenuController : MonoBehaviour
         StartCoroutine(PlayCoroutine());
     }
 
-
     public void Fade()
     {
         StartCoroutine(PlayCoroutine());
     }
 
-
     IEnumerator PlayCoroutine()
     {
         Debug.Log("Loading scene...");
+
+        MenuButtons.SetActive(false);
+
         Color fadeColor = fadeUI.color;
-        fadeColor.a = 0f; // Set alpha to 0
-        fadeUI.color = fadeColor; // Apply the modified color
+        fadeColor.a = 0f;
+        fadeUI.color = fadeColor;
 
         float t = 0f;
-
-        // Fade out (alpha 1 -> 0)
         while (t < fadeDuration)
         {
             t += Time.deltaTime;
-            float NormalizedTime = Mathf.Clamp01(t / fadeDuration);
-            fadeColor.a = 1f - NormalizedTime; // Decrease alpha
+            float normalizedTime = Mathf.Clamp01(t / fadeDuration);
+            fadeColor.a = 1f - normalizedTime;
             fadeUI.color = fadeColor;
-            yield return null; // Wait for the next frame
+            yield return null;
         }
 
-        // Delay for a moment to show the fade effect
         yield return new WaitForSeconds(1f);
-
-        // Load the next scene (replace "NAME" with the actual scene name)
-        SceneManager.LoadScene("LittlePig");
+        SceneManager.LoadScene("LittlePig"); // Change if needed
     }
-
 
     public void Controls()
     {

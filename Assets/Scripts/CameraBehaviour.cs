@@ -15,16 +15,19 @@ public class CameraBehaviour : MonoBehaviour
     public Transform player;
     public EnemyAI enemyAI;
 
+    public PlayerControllerRB playerController;
+
     private float initialYRotation;
     private bool rotatingRight = true;
     private bool isPaused = false;
 
-    public PlayerControllerRB playerController;
+    private Transform visionTrigger;
 
     void Start()
     {
         initialYRotation = transform.eulerAngles.y;
         StartCoroutine(SweepCoroutine());
+        CreateVisionTrigger();
     }
 
     void Update()
@@ -49,7 +52,7 @@ public class CameraBehaviour : MonoBehaviour
                     isPaused = true;
                     rotatingRight = !rotatingRight;
                     yield return new WaitForSeconds(pauseDuration);
-                    initialYRotation = transform.eulerAngles.y; // Reset base rotation
+                    initialYRotation = transform.eulerAngles.y;
                     isPaused = false;
                 }
             }
@@ -60,17 +63,16 @@ public class CameraBehaviour : MonoBehaviour
 
     void CheckVision()
     {
-        if (playerController.IsStanding()) return; // Only see player when NOT standing
+        if (playerController.IsStanding()) return;
 
         Vector3 direction = (player.position - transform.position).normalized;
         float distance = Vector3.Distance(transform.position, player.position);
-
         if (distance > visionRange) return;
 
         float angle = Vector3.Angle(transform.forward, direction);
         if (angle > fieldOfView * 0.5f) return;
 
-        Vector3 origin = transform.position + Vector3.up * 1.2f;
+        Vector3 origin = transform.position + Vector3.up;
         Vector3 target = player.position + Vector3.up * 0.3f;
 
         if (Physics.Raycast(origin, (target - origin), out RaycastHit hit, visionRange, visionMask))
@@ -84,6 +86,42 @@ public class CameraBehaviour : MonoBehaviour
 
         Debug.DrawRay(origin, (target - origin).normalized * visionRange, Color.red);
     }
+
+    void CreateVisionTrigger()
+    {
+        // Create the trigger GameObject and parent it to the camera
+        GameObject triggerObj = new GameObject("VisionTrigger");
+        triggerObj.transform.SetParent(transform);
+
+        // Set its position in front of the camera (in world space)
+        triggerObj.transform.localPosition = Vector3.zero;
+        triggerObj.transform.localRotation = Quaternion.identity;
+
+        // Add and configure the collider
+        CapsuleCollider col = triggerObj.AddComponent<CapsuleCollider>();
+        col.isTrigger = true;
+
+        // Calculate radius and height based on FOV and range
+        float radius = Mathf.Tan(fieldOfView * 0.5f * Mathf.Deg2Rad) * visionRange;
+        float height = visionRange;
+
+        col.radius = radius - 0.55f;
+        col.height = height - 2f;
+        col.direction = 2; 
+
+        triggerObj.transform.localPosition = new Vector3(0, 1.2f, 464.8f);
+
+        // Add the trigger logic script to new gameobject
+        VisionTrigger triggerScript = triggerObj.AddComponent<VisionTrigger>();
+        triggerScript.player = player;
+        triggerScript.enemyAI = enemyAI;
+        triggerScript.visionMask = visionMask;
+
+        Debug.Log("VisionTrigger created at local Z = " + triggerObj.transform.localPosition.z +
+                  " | radius = " + radius + " | height = " + height);
+    }
+
+
 
     void OnDrawGizmos()
     {
