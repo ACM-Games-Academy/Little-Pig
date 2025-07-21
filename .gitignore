@@ -99,5 +99,4 @@ Assets/Plugins/Editor/JetBrains*
 crashlytics-build.properties
 
 # Exported files
-ExportedObj/
 .consulo/
