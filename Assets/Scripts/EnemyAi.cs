@@ -105,9 +105,17 @@ public class EnemyAI : MonoBehaviour
 
     public void Alert(Vector3 position)
     {
+        CancelActions();
         isChasing = true;
         lastSeenTimer = 0f;
         SetDestination(position);
+    }
+
+    void CancelActions()
+    {
+        animator.SetBool("IsInspecting", false);
+        animator.SetBool("IsChopping", false);
+        animator.SetBool("IsSharp", false);
     }
 
     bool CanSeePlayer()
