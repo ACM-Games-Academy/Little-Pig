@@ -19867,12 +19867,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 1982369741}
   model: {fileID: 1406450561}
-  walkSpeed: 2.5
+  walkSpeed: 2.6
   runSpeed: 3.5
-  StandingSpeed: 2
-  jumpHeight: 0.5
+  StandingSpeed: 2.1
+  jumpHeight: 0.37
   turnSmoothTime: 0.1
-  acceleration: 8
+  acceleration: 10
   standingHeight: 2
   StandingingHeight: 1
   groundLayer:
