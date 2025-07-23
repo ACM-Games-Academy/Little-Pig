@@ -13,7 +13,7 @@ public class PlayerControllerRB : MonoBehaviour
     public float walkSpeed = 4f;
     public float runSpeed = 8f;
     public float StandingSpeed = 2f;
-    public float jumpHeight = 1.2f;
+    public float jumpHeight = 1f;
     public float turnSmoothTime = 0.1f;
     public float acceleration = 10f;
     private float gravity => Physics.gravity.y;

@@ -19870,9 +19870,9 @@ MonoBehaviour:
   walkSpeed: 2.5
   runSpeed: 3.5
   StandingSpeed: 2
-  jumpHeight: 0.6
+  jumpHeight: 0.5
   turnSmoothTime: 0.1
-  acceleration: 10
+  acceleration: 8
   standingHeight: 2
   StandingingHeight: 1
   groundLayer:
