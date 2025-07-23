@@ -18,6 +18,10 @@ public class EnemyAI : MonoBehaviour
     public Transform[] patrolPoints;
     public float patrolWaitTime = 2f;
 
+    [Header("Knife Pickup")]
+    public GameObject tableKnife;
+    public GameObject aiKnife;
+
     private NavMeshAgent agent;
     private int currentPatrolIndex = 0;
     private float lastSeenTimer = 0f;
@@ -157,6 +161,10 @@ public class EnemyAI : MonoBehaviour
         else if (other.CompareTag("Chop"))
         {
             animator.SetBool("IsChopping", true);
+
+            // Knife swap: Pick up the knife from the table
+            if (tableKnife != null) tableKnife.SetActive(false);
+            if (aiKnife != null) aiKnife.SetActive(true);
         }
         else if (other.CompareTag("Sharpen"))
         {
@@ -178,6 +186,10 @@ public class EnemyAI : MonoBehaviour
     public void OnChopFinished()
     {
         animator.SetBool("IsChopping", false);
+
+        // Knife swap: Return knife to table
+        if (tableKnife != null) tableKnife.SetActive(true);
+        if (aiKnife != null) aiKnife.SetActive(false);
     }
 
     public void OnSharpenFinished()
