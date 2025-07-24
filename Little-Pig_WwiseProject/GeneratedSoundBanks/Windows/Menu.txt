@@ -1,0 +1,15 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1917263390	StopMusic			\Default Work Unit\StopMusic	
+	2018644784	Play_Ambient_Music_FIN			\Default Work Unit\Play_Ambient_Music_FIN	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3991942870	Music			\Default Work Unit\Music	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Music			
+	3207097637	MusicOff	Music			
+	3998479257	MusicOn	Music			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	148829452	Ambient_Music FIN	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\48\{48A45300-BE8C-6E25-533B-CC7E2F8E5FEF}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient_Music FIN		899773
+

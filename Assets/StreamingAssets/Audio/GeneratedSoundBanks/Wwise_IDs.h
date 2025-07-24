@@ -13,23 +13,48 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_AMBIENT_MUSIC_FIN = 2018644784U;
         static const AkUniqueID PLAY_AMBIENT_NOISE = 463827929U;
         static const AkUniqueID PLAY_BUTCHER_FOOTSTEPS = 2521765307U;
         static const AkUniqueID PLAY_CHOPPING_SFX = 1502672598U;
+        static const AkUniqueID PLAY_KNIFE_INSPECT = 1425874556U;
         static const AkUniqueID PLAY_SLIDING = 443088484U;
         static const AkUniqueID PLAY_WHETSTONE = 3591821967U;
+        static const AkUniqueID STOPMUSIC = 1917263390U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace MUSIC
+        {
+            static const AkUniqueID GROUP = 3991942870U;
+
+            namespace STATE
+            {
+                static const AkUniqueID MUSICOFF = 3207097637U;
+                static const AkUniqueID MUSICON = 3998479257U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace MUSIC
+
+    } // namespace STATES
 
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID MAIN = 3161908922U;
+        static const AkUniqueID MENU = 2607556080U;
     } // namespace BANKS
 
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID REVERB = 348963605U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {

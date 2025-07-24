@@ -79,6 +79,42 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Knife_Inspect" ID="{C889A957-73B2-4D35-A28C-9F9CD23CB49A}">
+					<ChildrenList>
+						<Action Name="" ID="{22E64E72-8331-467E-8A7D-A360DDBEEBD1}" ShortID="8344044">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Knife Inspect" ID="{96A059A9-C4AE-4977-9D18-B9BBE5B0F096}" WorkUnitID="{80981E41-B77B-4C19-AD5D-ADFB6BDFDBDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ambient_Music_FIN" ID="{B9999B3E-6916-47D2-9AAA-CE5A55A91E3F}">
+					<ChildrenList>
+						<Action Name="" ID="{250F675E-FF42-4FA6-98E3-3C119AEA9FEF}" ShortID="576859400">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambient_Music FIN" ID="{5A91A834-3E19-4070-AE03-E863A3E023EA}" WorkUnitID="{80981E41-B77B-4C19-AD5D-ADFB6BDFDBDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="StopMusic" ID="{422CE758-7D00-443F-BFD0-B5B037EB71A7}">
+					<ChildrenList>
+						<Action Name="" ID="{DD048CCB-692D-441C-BF72-0B4329738C74}" ShortID="959875262">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambient_Music FIN" ID="{5A91A834-3E19-4070-AE03-E863A3E023EA}" WorkUnitID="{80981E41-B77B-4C19-AD5D-ADFB6BDFDBDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

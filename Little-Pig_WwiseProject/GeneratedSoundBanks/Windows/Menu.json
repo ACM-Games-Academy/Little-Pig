@@ -1,0 +1,57 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "2607556080",
+    "Type": "User",
+    "GUID": "{69F82AA1-5892-46B7-B27F-E6076B447C14}",
+    "Language": "SFX",
+    "Hash": "{E9809280-1BCE-C8CC-3C95-3673876F944F}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Menu",
+    "ShortName": "Menu",
+    "Path": "Menu.bnk",
+    "Media": [
+     {
+      "Id": "148829452",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Ambient_Music FIN.wav",
+      "CachePath": "48/{48A45300-BE8C-6E25-533B-CC7E2F8E5FEF}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2018644784",
+      "Name": "Play_Ambient_Music_FIN",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Ambient_Music_FIN",
+      "GUID": "{B9999B3E-6916-47D2-9AAA-CE5A55A91E3F}",
+      "DurationType": "OneShot",
+      "DurationMin": "58.072224",
+      "DurationMax": "58.072224",
+      "MediaRefs": [
+       {
+        "Id": "148829452"
+       }
+      ]
+     },
+     {
+      "Id": "1917263390",
+      "Name": "StopMusic",
+      "ObjectPath": "\\Events\\Default Work Unit\\StopMusic",
+      "GUID": "{422CE758-7D00-443F-BFD0-B5B037EB71A7}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{B9DCC6D6-E3E0-4A51-6014-95B81E9BEC99}"
+ }
+}

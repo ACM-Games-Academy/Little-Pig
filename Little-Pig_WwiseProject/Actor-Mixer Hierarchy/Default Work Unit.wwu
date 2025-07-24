@@ -42,6 +42,11 @@
 				<RandomSequenceContainer Name="Butcher Footsteps" ID="{962669B1-9054-424F-8877-21E73AEDD472}" ShortID="106755855">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>-2</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>3</Value>
@@ -57,6 +62,9 @@
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3A25E15-6A06-4BD5-A9C4-7BFB18EA312A}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Reverb" ID="{7AF201AE-C1FA-455F-AD2A-B9771D761150}" WorkUnitID="{A3A25E15-6A06-4BD5-A9C4-7BFB18EA312A}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -181,6 +189,12 @@
 						<Sound Name="Sliding" ID="{603AF8FB-92A4-4CD5-B096-1E88344AF9DB}" ShortID="364829423">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="AttenuationDistanceScaling" Type="Real32" Value="0.75"/>
+								<Property Name="OutputBusVolume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -214,6 +228,11 @@
 						<Sound Name="Chopping SFX" ID="{3A84EA21-154E-4FE4-BD75-167E2481CC1F}" ShortID="132159254">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -224,6 +243,9 @@
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3A25E15-6A06-4BD5-A9C4-7BFB18EA312A}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="Reverb" ID="{7AF201AE-C1FA-455F-AD2A-B9771D761150}" WorkUnitID="{A3A25E15-6A06-4BD5-A9C4-7BFB18EA312A}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -283,6 +305,13 @@
 					</ChildrenList>
 				</Folder>
 				<Sound Name="Whetstone" ID="{B6324BDC-1BE5-466D-AAB0-33AD4EDCB6C0}" ShortID="648743678">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43C4280B-9E4F-44F6-98A1-FFADBD7508A2}"/>
@@ -293,6 +322,12 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="grindstone" ID="{14B18DC7-747A-48BD-9C49-6D6F4398D811}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.202423943145366"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.404847886290732"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="6.99808528803134"/>
+							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>grindstone.wav</AudioFile>
 							<MediaIDList>
@@ -302,6 +337,76 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="grindstone" ID="{14B18DC7-747A-48BD-9C49-6D6F4398D811}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Knife Inspect" ID="{96A059A9-C4AE-4977-9D18-B9BBE5B0F096}" ShortID="524035051">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43C4280B-9E4F-44F6-98A1-FFADBD7508A2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3A25E15-6A06-4BD5-A9C4-7BFB18EA312A}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="knife_slashing" ID="{C5BC38F2-134D-4A09-872D-6B0CFEFCA430}">
+							<PropertyList>
+								<Property Name="LoopBegin" Type="Real64" Value="0.735146380678009"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.735146380678009"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>knife_slashing.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1000150231"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="knife_slashing" ID="{C5BC38F2-134D-4A09-872D-6B0CFEFCA430}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Ambient_Music FIN" ID="{5A91A834-3E19-4070-AE03-E863A3E023EA}" ShortID="1010362422">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43C4280B-9E4F-44F6-98A1-FFADBD7508A2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3A25E15-6A06-4BD5-A9C4-7BFB18EA312A}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ambient_Music FIN" ID="{1C1ECBBC-352B-4DBE-BFDF-302B3FBD2863}">
+							<Language>SFX</Language>
+							<AudioFile>Ambient_Music FIN.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="148829452"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<StateInfo>
+						<StateGroupList>
+							<StateGroupInfo>
+								<StateGroupRef Name="Music" ID="{55C23308-779D-447C-B371-C82CA300ABCF}"/>
+							</StateGroupInfo>
+						</StateGroupList>
+						<CustomStateList>
+							<CustomState>
+								<StateRef Name="MusicOff" ID="{EEB19023-6752-4236-865E-9948D1566C62}"/>
+								<CustomState Name="" ID="{B9D12534-EB70-411A-AF6B-5B63707129B8}" ShortID="563604797">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64" Value="-108"/>
+									</PropertyList>
+								</CustomState>
+							</CustomState>
+							<CustomState>
+								<StateRef Name="MusicOn" ID="{05C5F8D5-8ED2-4F20-BCF3-472C07E67CAE}"/>
+								<CustomState Name="" ID="{2F84B583-11D0-4005-8D2D-F84E31A05DEE}" ShortID="277589954"/>
+							</CustomState>
+						</CustomStateList>
+					</StateInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="Ambient_Music FIN" ID="{1C1ECBBC-352B-4DBE-BFDF-302B3FBD2863}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

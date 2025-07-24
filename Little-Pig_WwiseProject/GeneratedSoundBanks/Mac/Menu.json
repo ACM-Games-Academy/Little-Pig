@@ -1,0 +1,57 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "2607556080",
+    "Type": "User",
+    "GUID": "{69F82AA1-5892-46B7-B27F-E6076B447C14}",
+    "Language": "SFX",
+    "Hash": "{7E719D65-3F87-53B2-0A90-F78394230F88}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Menu",
+    "ShortName": "Menu",
+    "Path": "Menu.bnk",
+    "Media": [
+     {
+      "Id": "148829452",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Ambient_Music FIN.wav",
+      "CachePath": "11/{11E7B780-ECCD-9B1B-E41C-26F02C4A8291}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2018644784",
+      "Name": "Play_Ambient_Music_FIN",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Ambient_Music_FIN",
+      "GUID": "{B9999B3E-6916-47D2-9AAA-CE5A55A91E3F}",
+      "DurationType": "OneShot",
+      "DurationMin": "58.072224",
+      "DurationMax": "58.072224",
+      "MediaRefs": [
+       {
+        "Id": "148829452"
+       }
+      ]
+     },
+     {
+      "Id": "1917263390",
+      "Name": "StopMusic",
+      "ObjectPath": "\\Events\\Default Work Unit\\StopMusic",
+      "GUID": "{422CE758-7D00-443F-BFD0-B5B037EB71A7}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{E66B638A-0662-06C7-A7A9-40B498E54242}"
+ }
+}

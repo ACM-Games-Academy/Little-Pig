@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1C653F61-DB0B-4776-A1BC-DA9B3A486481}",
     "Language": "SFX",
-    "Hash": "{8E6C8D08-3553-97B9-98FE-2A094A4B34B4}",
+    "Hash": "{AC020178-8EB2-0CC0-D856-2A73911ED252}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -29,7 +29,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Ukulele whoosh.wav",
-      "CachePath": "06/{06E83DA2-FDF9-C691-F4A2-BCBEA89728CD}.wem"
+      "CachePath": "F3/{F35283C8-58BA-DE77-761F-2FC0C817E364}.wem"
      },
      {
       "Id": "447177132",
@@ -37,7 +37,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "FOLYProp_Duffle Bag Slide_PSE_BW-BD3HL_OuPDd.wav",
-      "CachePath": "99/{9941D5C2-736F-3306-816C-FA8E2A2C8533}.wem"
+      "CachePath": "AD/{ADA34423-762B-C64F-8EE5-0EB3D93FB722}.wem"
      },
      {
       "Id": "459069376",
@@ -61,7 +61,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Ambient Noise.wav",
-      "CachePath": "57/{57980E98-59CF-7D0B-C29E-1FB86F1D605F}.wem"
+      "CachePath": "C3/{C3E178D7-9BEA-7823-C947-6504D4211CDF}.wem"
      },
      {
       "Id": "635096154",
@@ -77,7 +77,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Chopping SFX.wav",
-      "CachePath": "61/{610E555C-8970-947A-DB60-0672E298C2BE}.wem"
+      "CachePath": "1B/{1B6E4661-7166-0FAB-239C-BAC04F3A15D7}.wem"
      },
      {
       "Id": "717998526",
@@ -85,7 +85,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "grindstone.wav",
-      "CachePath": "42/{42802B81-B208-85CA-6616-C543E922FC13}.wem"
+      "CachePath": "C4/{C44EC664-DF18-779F-207A-AE21744CDF4C}.wem"
      },
      {
       "Id": "881930790",
@@ -94,6 +94,14 @@
       "Location": "Memory",
       "ShortName": "Shoe Step Stone Hard D.wav",
       "CachePath": "D1/{D16D8A32-E7CA-E99C-6381-586CD1CEE4B1}.wem"
+     },
+     {
+      "Id": "1000150231",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "knife_slashing.wav",
+      "CachePath": "0D/{0D832347-B80B-D2F0-E7D9-F2B35BA2D007}.wem"
      }
     ],
     "Events": [
@@ -134,6 +142,14 @@
        {
         "Id": "881930790"
        }
+      ],
+      "AuxBusRefs": [
+       {
+        "Id": "348963605",
+        "Name": "Reverb",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Reverb",
+        "GUID": "{7AF201AE-C1FA-455F-AD2A-B9771D761150}"
+       }
       ]
      },
      {
@@ -152,6 +168,28 @@
        {
         "Id": "666881249"
        }
+      ],
+      "AuxBusRefs": [
+       {
+        "Id": "348963605",
+        "Name": "Reverb",
+        "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Reverb",
+        "GUID": "{7AF201AE-C1FA-455F-AD2A-B9771D761150}"
+       }
+      ]
+     },
+     {
+      "Id": "1425874556",
+      "Name": "Play_Knife_Inspect",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Knife_Inspect",
+      "GUID": "{C889A957-73B2-4D35-A28C-9F9CD23CB49A}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.3767287",
+      "DurationMax": "1.3767287",
+      "MediaRefs": [
+       {
+        "Id": "1000150231"
+       }
       ]
      },
      {
@@ -159,7 +197,7 @@
       "Name": "Play_Sliding",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Sliding",
       "GUID": "{F5A9E0CF-8F23-4441-ADBA-78BE5C9F3C4F}",
-      "MaxAttenuation": "20",
+      "MaxAttenuation": "15",
       "DurationType": "OneShot",
       "DurationMin": "1.224297",
       "DurationMax": "1.224297",
@@ -175,17 +213,27 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Whetstone",
       "GUID": "{07F09795-140C-4F98-A21A-9C59AAC91241}",
       "DurationType": "OneShot",
-      "DurationMin": "11.422494",
-      "DurationMax": "11.422494",
+      "DurationMin": "6.9980855",
+      "DurationMax": "6.9980855",
       "MediaRefs": [
        {
         "Id": "717998526"
        }
       ]
+     },
+     {
+      "Id": "1917263390",
+      "Name": "StopMusic",
+      "ObjectPath": "\\Events\\Default Work Unit\\StopMusic",
+      "GUID": "{422CE758-7D00-443F-BFD0-B5B037EB71A7}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ]
    }
   ],
-  "FileHash": "{34FEBC18-2AEB-0B4F-8A76-4E802652EAD8}"
+  "FileHash": "{9E39EED6-DAD7-F725-8B93-AAD76D8BA8AC}"
  }
 }

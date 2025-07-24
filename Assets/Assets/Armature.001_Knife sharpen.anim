@@ -51743,14 +51743,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 7.6
-    functionName: 
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 7.8
-    functionName: 
+    functionName: PlayInspect
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
