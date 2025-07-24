@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	463827929	Play_Ambient_Noise			\Default Work Unit\Play_Ambient_Noise	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	625651025	Ambient Noise	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\6D\{6DFCC850-17AD-938F-A775-8E3CD36342FC}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient Noise		11665960
+

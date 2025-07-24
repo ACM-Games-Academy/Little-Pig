@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B819B48C-5C0E-42E5-8CA0-B91195B92079}" SchemaVersion="123">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{B819B48C-5C0E-42E5-8CA0-B91195B92079}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Ambient_Noise" ID="{B7CCB755-2637-4BF9-A4BD-C4C68B96BDE0}">
+					<ChildrenList>
+						<Action Name="" ID="{CC638164-28D6-410F-9005-E1810926C1D0}" ShortID="902944496">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambient Noise" ID="{3387275C-0E7D-4186-A3C2-7403AA501111}" WorkUnitID="{80981E41-B77B-4C19-AD5D-ADFB6BDFDBDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
