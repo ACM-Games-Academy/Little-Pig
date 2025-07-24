@@ -4,6 +4,14 @@
 		<WorkUnit Name="Default Work Unit" ID="{80981E41-B77B-4C19-AD5D-ADFB6BDFDBDE}" PersistMode="Standalone">
 			<ChildrenList>
 				<Sound Name="Ambient Noise" ID="{3387275C-0E7D-4186-A3C2-7403AA501111}" ShortID="185889292">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-10</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43C4280B-9E4F-44F6-98A1-FFADBD7508A2}"/>
@@ -14,6 +22,12 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="Ambient Noise" ID="{48224A85-7DE1-479F-9673-D0C0C06ED29E}">
+							<PropertyList>
+								<Property Name="CrossfadeDuration" Type="Real64" Value="6199.97"/>
+								<Property Name="LoopBegin" Type="Real64" Value="3.29398176405165"/>
+								<Property Name="LoopEnd" Type="Real64" Value="62.9657257152739"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>Ambient Noise.wav</AudioFile>
 							<MediaIDList>
@@ -23,6 +37,271 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="Ambient Noise" ID="{48224A85-7DE1-479F-9673-D0C0C06ED29E}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="Butcher Footsteps" ID="{962669B1-9054-424F-8877-21E73AEDD472}" ShortID="106755855">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="FootstepsATT" ID="{591CBCC2-B525-4A15-A033-800988093F9C}" WorkUnitID="{C2B5E10A-FB20-4911-874D-90248BB12560}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43C4280B-9E4F-44F6-98A1-FFADBD7508A2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3A25E15-6A06-4BD5-A9C4-7BFB18EA312A}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Shoe Step Stone Hard A" ID="{322698CF-F8E1-41C2-9413-068E9A80449B}" ShortID="492005466">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43C4280B-9E4F-44F6-98A1-FFADBD7508A2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3A25E15-6A06-4BD5-A9C4-7BFB18EA312A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Shoe Step Stone Hard A" ID="{6D0D4E86-0EF4-4E00-BEA8-A0BA402DA462}">
+									<Language>SFX</Language>
+									<AudioFile>Shoe Step Stone Hard A.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="635096154"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Shoe Step Stone Hard A" ID="{6D0D4E86-0EF4-4E00-BEA8-A0BA402DA462}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Shoe Step Stone Hard B" ID="{ED77D633-7AD4-4318-B6D8-5A46BB1B69D0}" ShortID="1016986322">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43C4280B-9E4F-44F6-98A1-FFADBD7508A2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3A25E15-6A06-4BD5-A9C4-7BFB18EA312A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Shoe Step Stone Hard B" ID="{E4E726F9-464A-4517-A29E-A35EA040F005}">
+									<Language>SFX</Language>
+									<AudioFile>Shoe Step Stone Hard B.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="295477461"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Shoe Step Stone Hard B" ID="{E4E726F9-464A-4517-A29E-A35EA040F005}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Shoe Step Stone Hard C" ID="{3EE70C80-3A80-40B3-985E-E102C10B0A20}" ShortID="44283591">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43C4280B-9E4F-44F6-98A1-FFADBD7508A2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3A25E15-6A06-4BD5-A9C4-7BFB18EA312A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Shoe Step Stone Hard C" ID="{9D10354F-343F-4350-99D8-1E6B6EE1978C}">
+									<Language>SFX</Language>
+									<AudioFile>Shoe Step Stone Hard C.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="496403479"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Shoe Step Stone Hard C" ID="{9D10354F-343F-4350-99D8-1E6B6EE1978C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Shoe Step Stone Hard D" ID="{3B9DB1DF-62C2-4724-8EB0-5E98C0FE63DD}" ShortID="549690899">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43C4280B-9E4F-44F6-98A1-FFADBD7508A2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3A25E15-6A06-4BD5-A9C4-7BFB18EA312A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Shoe Step Stone Hard D" ID="{679B68D8-19E1-4D20-A960-37EC16103B76}">
+									<Language>SFX</Language>
+									<AudioFile>Shoe Step Stone Hard D.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="881930790"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Shoe Step Stone Hard D" ID="{679B68D8-19E1-4D20-A960-37EC16103B76}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Shoe Step Stone Hard E" ID="{3916F0A7-B0BB-4B44-872F-4F2BF5B8D7D3}" ShortID="306492792">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43C4280B-9E4F-44F6-98A1-FFADBD7508A2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3A25E15-6A06-4BD5-A9C4-7BFB18EA312A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Shoe Step Stone Hard E" ID="{6BCB53A5-56C5-4D57-AECE-2F02B0993984}">
+									<Language>SFX</Language>
+									<AudioFile>Shoe Step Stone Hard E.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="459069376"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Shoe Step Stone Hard E" ID="{6BCB53A5-56C5-4D57-AECE-2F02B0993984}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<Folder Name="Chopping Animation" ID="{4016FDAA-1151-4807-BBDD-840CF0E9EA67}" ShortID="713312873">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Sound Name="Sliding" ID="{603AF8FB-92A4-4CD5-B096-1E88344AF9DB}" ShortID="364829423">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="StandardATT" ID="{FCA6B2D2-B770-4E4A-807B-FF29D02C5A2A}" WorkUnitID="{C2B5E10A-FB20-4911-874D-90248BB12560}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43C4280B-9E4F-44F6-98A1-FFADBD7508A2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3A25E15-6A06-4BD5-A9C4-7BFB18EA312A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FOLYProp_Duffle Bag Slide_PSE_BW-BD3HL_OuPDd" ID="{C4527D47-80C4-4538-A923-5B61EF29070E}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.211009903709487"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.43530692630239"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>FOLYProp_Duffle Bag Slide_PSE_BW-BD3HL_OuPDd.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="447177132"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FOLYProp_Duffle Bag Slide_PSE_BW-BD3HL_OuPDd" ID="{C4527D47-80C4-4538-A923-5B61EF29070E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Chopping SFX" ID="{3A84EA21-154E-4FE4-BD75-167E2481CC1F}" ShortID="132159254">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="StandardATT" ID="{FCA6B2D2-B770-4E4A-807B-FF29D02C5A2A}" WorkUnitID="{C2B5E10A-FB20-4911-874D-90248BB12560}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43C4280B-9E4F-44F6-98A1-FFADBD7508A2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3A25E15-6A06-4BD5-A9C4-7BFB18EA312A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Chopping SFX" ID="{9D47A490-D199-46E0-83D6-09167A0DCEB1}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0386378292990203"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.568528059685583"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.965945661458126"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Chopping SFX.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="666881249"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Chopping SFX" ID="{9D47A490-D199-46E0-83D6-09167A0DCEB1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Swing Down" ID="{A206752A-A5BD-438C-ACB6-6B3DEA4B475A}" ShortID="456091355">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="StandardATT" ID="{FCA6B2D2-B770-4E4A-807B-FF29D02C5A2A}" WorkUnitID="{C2B5E10A-FB20-4911-874D-90248BB12560}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43C4280B-9E4F-44F6-98A1-FFADBD7508A2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3A25E15-6A06-4BD5-A9C4-7BFB18EA312A}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Swing Down" ID="{79C3357B-172D-4D5B-8FC8-39F82DC28601}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0.66225467548512"/>
+										<Property Name="LoopEnd" Type="Real64" Value="1.0208002446162"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.655927401515517"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.02080024461621"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Ukulele whoosh.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="442653690"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Swing Down" ID="{79C3357B-172D-4D5B-8FC8-39F82DC28601}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Sound Name="Whetstone" ID="{B6324BDC-1BE5-466D-AAB0-33AD4EDCB6C0}" ShortID="648743678">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43C4280B-9E4F-44F6-98A1-FFADBD7508A2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3A25E15-6A06-4BD5-A9C4-7BFB18EA312A}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="grindstone" ID="{14B18DC7-747A-48BD-9C49-6D6F4398D811}">
+							<Language>SFX</Language>
+							<AudioFile>grindstone.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="717998526"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="grindstone" ID="{14B18DC7-747A-48BD-9C49-6D6F4398D811}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

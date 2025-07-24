@@ -14,6 +14,10 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_AMBIENT_NOISE = 463827929U;
+        static const AkUniqueID PLAY_BUTCHER_FOOTSTEPS = 2521765307U;
+        static const AkUniqueID PLAY_CHOPPING_SFX = 1502672598U;
+        static const AkUniqueID PLAY_SLIDING = 443088484U;
+        static const AkUniqueID PLAY_WHETSTONE = 3591821967U;
     } // namespace EVENTS
 
     namespace BANKS

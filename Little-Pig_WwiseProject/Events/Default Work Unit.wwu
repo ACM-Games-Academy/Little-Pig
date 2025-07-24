@@ -14,6 +14,71 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Butcher_Footsteps" ID="{E64E05B8-DB04-4F84-8B40-458E0ADCACD8}">
+					<ChildrenList>
+						<Action Name="" ID="{128B9C2A-AA56-4E91-ADCB-5BF55313380E}" ShortID="388350008">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Butcher Footsteps" ID="{962669B1-9054-424F-8877-21E73AEDD472}" WorkUnitID="{80981E41-B77B-4C19-AD5D-ADFB6BDFDBDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Chopping_SFX" ID="{DE73421E-65D7-4017-B8B1-F01EBE3DFA6C}">
+					<ChildrenList>
+						<Action Name="" ID="{2D90F555-AEC4-4792-8ED2-159AB038567A}" ShortID="1073405584">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Swing Down" ID="{A206752A-A5BD-438C-ACB6-6B3DEA4B475A}" WorkUnitID="{80981E41-B77B-4C19-AD5D-ADFB6BDFDBDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{46CE3AFA-0966-4F2B-8A8C-D8DFF230AF4E}" ShortID="746561801">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Chopping SFX" ID="{3A84EA21-154E-4FE4-BD75-167E2481CC1F}" WorkUnitID="{80981E41-B77B-4C19-AD5D-ADFB6BDFDBDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Sliding" ID="{F5A9E0CF-8F23-4441-ADBA-78BE5C9F3C4F}">
+					<ChildrenList>
+						<Action Name="" ID="{B7F666F5-F08F-47FC-A638-4B1C6D201CC0}" ShortID="285348930">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sliding" ID="{603AF8FB-92A4-4CD5-B096-1E88344AF9DB}" WorkUnitID="{80981E41-B77B-4C19-AD5D-ADFB6BDFDBDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Swing_Down" ID="{40A4600D-434A-4FBC-8B78-E5870845A97A}">
+					<ChildrenList>
+						<Action Name="" ID="{5A127F80-72DD-4712-9796-8A2AE077BAA2}" ShortID="1005947463">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Swing Down" ID="{A206752A-A5BD-438C-ACB6-6B3DEA4B475A}" WorkUnitID="{80981E41-B77B-4C19-AD5D-ADFB6BDFDBDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Whetstone" ID="{07F09795-140C-4F98-A21A-9C59AAC91241}">
+					<ChildrenList>
+						<Action Name="" ID="{1D29956A-2CBB-43A8-8CEB-CBC9357CEE70}" ShortID="255822141">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Whetstone" ID="{B6324BDC-1BE5-466D-AAB0-33AD4EDCB6C0}" WorkUnitID="{80981E41-B77B-4C19-AD5D-ADFB6BDFDBDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

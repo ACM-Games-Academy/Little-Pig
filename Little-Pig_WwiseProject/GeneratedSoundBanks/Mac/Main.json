@@ -10,18 +10,90 @@
     "Type": "User",
     "GUID": "{1C653F61-DB0B-4776-A1BC-DA9B3A486481}",
     "Language": "SFX",
-    "Hash": "{7A398E34-4DB3-5624-F7AC-C78FFEDA75CF}",
+    "Hash": "{C36F6ECC-B0BE-07E4-9434-FF754B5B0D0E}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
     "Media": [
+     {
+      "Id": "295477461",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shoe Step Stone Hard B.wav",
+      "CachePath": "8F/{8F2905C2-952F-9774-9904-EFDB419D84E9}.wem"
+     },
+     {
+      "Id": "442653690",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Ukulele whoosh.wav",
+      "CachePath": "AE/{AEF2D880-6E35-266C-DE67-56064725F525}.wem"
+     },
+     {
+      "Id": "447177132",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "FOLYProp_Duffle Bag Slide_PSE_BW-BD3HL_OuPDd.wav",
+      "CachePath": "B6/{B62E8816-3A77-EC4D-D2CF-8FCDC19BD6D6}.wem"
+     },
+     {
+      "Id": "459069376",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shoe Step Stone Hard E.wav",
+      "CachePath": "9D/{9D6D9A3C-F233-49DF-7BCF-E2831C826D78}.wem"
+     },
+     {
+      "Id": "496403479",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shoe Step Stone Hard C.wav",
+      "CachePath": "41/{41E7D538-18B0-D409-C3ED-59191204EC0A}.wem"
+     },
      {
       "Id": "625651025",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Ambient Noise.wav",
-      "CachePath": "6D/{6DFCC850-17AD-938F-A775-8E3CD36342FC}.wem"
+      "CachePath": "A2/{A226EE80-83B2-A943-653D-685C2B8B2239}.wem"
+     },
+     {
+      "Id": "635096154",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shoe Step Stone Hard A.wav",
+      "CachePath": "F9/{F9E4645B-8788-C08E-7929-EC9142B0B61D}.wem"
+     },
+     {
+      "Id": "666881249",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Chopping SFX.wav",
+      "CachePath": "0C/{0CB71D17-EACB-91AA-D74D-2AADB7E5B775}.wem"
+     },
+     {
+      "Id": "717998526",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "grindstone.wav",
+      "CachePath": "A7/{A78E81E1-1B2D-63AC-9DA1-020D857443DC}.wem"
+     },
+     {
+      "Id": "881930790",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shoe Step Stone Hard D.wav",
+      "CachePath": "AF/{AF89C9F1-65DE-30C4-4E8C-DAD8B8D31929}.wem"
      }
     ],
     "Events": [
@@ -30,18 +102,90 @@
       "Name": "Play_Ambient_Noise",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Ambient_Noise",
       "GUID": "{B7CCB755-2637-4BF9-A4BD-C4C68B96BDE0}",
-      "DurationType": "OneShot",
-      "DurationMin": "66.13302",
-      "DurationMax": "66.13302",
+      "DurationType": "Infinite",
       "MediaRefs": [
        {
         "Id": "625651025"
+       }
+      ]
+     },
+     {
+      "Id": "2521765307",
+      "Name": "Play_Butcher_Footsteps",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Butcher_Footsteps",
+      "GUID": "{E64E05B8-DB04-4F84-8B40-458E0ADCACD8}",
+      "MaxAttenuation": "30",
+      "DurationType": "OneShot",
+      "DurationMin": "0.74303854",
+      "DurationMax": "0.74303854",
+      "MediaRefs": [
+       {
+        "Id": "295477461"
+       },
+       {
+        "Id": "459069376"
+       },
+       {
+        "Id": "496403479"
+       },
+       {
+        "Id": "635096154"
+       },
+       {
+        "Id": "881930790"
+       }
+      ]
+     },
+     {
+      "Id": "1502672598",
+      "Name": "Play_Chopping_SFX",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Chopping_SFX",
+      "GUID": "{DE73421E-65D7-4017-B8B1-F01EBE3DFA6C}",
+      "MaxAttenuation": "20",
+      "DurationType": "OneShot",
+      "DurationMin": "1.4659457",
+      "DurationMax": "1.4659457",
+      "MediaRefs": [
+       {
+        "Id": "442653690"
+       },
+       {
+        "Id": "666881249"
+       }
+      ]
+     },
+     {
+      "Id": "443088484",
+      "Name": "Play_Sliding",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Sliding",
+      "GUID": "{F5A9E0CF-8F23-4441-ADBA-78BE5C9F3C4F}",
+      "MaxAttenuation": "20",
+      "DurationType": "OneShot",
+      "DurationMin": "1.224297",
+      "DurationMax": "1.224297",
+      "MediaRefs": [
+       {
+        "Id": "447177132"
+       }
+      ]
+     },
+     {
+      "Id": "3591821967",
+      "Name": "Play_Whetstone",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Whetstone",
+      "GUID": "{07F09795-140C-4F98-A21A-9C59AAC91241}",
+      "DurationType": "OneShot",
+      "DurationMin": "11.422494",
+      "DurationMax": "11.422494",
+      "MediaRefs": [
+       {
+        "Id": "717998526"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{A12E2521-24BE-063E-A433-A33005D6DA33}"
+  "FileHash": "{59722306-B8F6-3C59-3C8C-34E755176C5B}"
  }
 }
