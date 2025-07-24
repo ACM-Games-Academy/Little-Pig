@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{80981E41-B77B-4C19-AD5D-ADFB6BDFDBDE}" SchemaVersion="123">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{80981E41-B77B-4C19-AD5D-ADFB6BDFDBDE}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{80981E41-B77B-4C19-AD5D-ADFB6BDFDBDE}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Ambient Noise" ID="{3387275C-0E7D-4186-A3C2-7403AA501111}" ShortID="185889292">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{43C4280B-9E4F-44F6-98A1-FFADBD7508A2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A3A25E15-6A06-4BD5-A9C4-7BFB18EA312A}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Ambient Noise" ID="{48224A85-7DE1-479F-9673-D0C0C06ED29E}">
+							<Language>SFX</Language>
+							<AudioFile>Ambient Noise.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="625651025"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Ambient Noise" ID="{48224A85-7DE1-479F-9673-D0C0C06ED29E}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

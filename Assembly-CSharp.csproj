@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{686D3091-D124-2BC7-FDA3-E4D44B70534D}</ProjectGuid>
+    <ProjectGuid>{EFA799A4-1436-1CE4-58DC-F4D2102E49B1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -970,167 +970,167 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="AK.Wwise.Unity.Timeline.csproj">
-      <Project>{A267AE6A-17E9-0921-3012-D5550953DA71}</Project>
+      <Project>{E7D3D43A-B4E2-A95D-448B-0E4A05CF994F}</Project>
       <Name>AK.Wwise.Unity.Timeline</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Sysroot.Linux_x86_64.csproj">
-      <Project>{3ED0B4C5-E898-B30F-9DE0-C0B004E6F554}</Project>
+      <Project>{2B502F3E-B382-4855-C264-47AC1A0FACE2}</Project>
       <Name>Unity.Sysroot.Linux_x86_64</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.EditorCoroutines.Editor.csproj">
-      <Project>{6E7CA762-64F9-4788-B1DD-6788303ABBE8}</Project>
+      <Project>{EB3953FF-8FB9-DE5A-C4DD-B3434C74855F}</Project>
       <Name>Unity.EditorCoroutines.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="com.unity.cinemachine.editor.csproj">
-      <Project>{9990452F-E15F-0858-5C6C-9DB1C181A1E6}</Project>
+      <Project>{0CF9C04A-D035-03EC-010F-33FC39FF0D8A}</Project>
       <Name>com.unity.cinemachine.editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.AI.Navigation.csproj">
-      <Project>{8F3962D8-F11C-D71A-EC61-321C5FED0DC6}</Project>
+      <Project>{76E3FAF8-C484-F3F6-5354-4D413C976777}</Project>
       <Name>Unity.AI.Navigation</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{3E295640-5776-8949-E995-55EFD2D3304B}</Project>
+      <Project>{1A94C769-DEE6-95A4-17CA-894C87FC68E4}</Project>
       <Name>Unity.Timeline.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj">
-      <Project>{DFE9F943-DDB2-3665-EA42-4703DABAC47E}</Project>
+      <Project>{7FD6B092-0415-2430-2931-472BAC189377}</Project>
       <Name>Unity.VisualScripting.Shared.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="AK.Wwise.Unity.API.Editor.csproj">
-      <Project>{DDA1F8A1-CEE4-66D3-43E5-D35BDC58A25E}</Project>
+      <Project>{EB073166-B5CC-2778-0FAE-9782C5A9C594}</Project>
       <Name>AK.Wwise.Unity.API.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
-      <Project>{686DECA0-42EF-3D89-8DDC-50D6DD6C0390}</Project>
+      <Project>{74359444-C31D-2C10-15A8-01C8879626C6}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="AK.Wwise.Unity.MonoBehaviour.Editor.csproj">
-      <Project>{2241177C-C6E1-FE3F-F05B-73127C334233}</Project>
+      <Project>{10C3157F-40DC-9A12-60F5-ADABD0056F30}</Project>
       <Name>AK.Wwise.Unity.MonoBehaviour.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Core.csproj">
-      <Project>{2A7AC729-F621-0347-87A6-719EE105192F}</Project>
+      <Project>{D1F4680E-EF89-5022-69DE-95D617E9DD50}</Project>
       <Name>Unity.VisualScripting.Core</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{25C93A49-5C3C-CFF8-5342-69FF711E5C86}</Project>
+      <Project>{24B64088-6A6E-D652-1C64-33C5D7C0BF9C}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
-      <Project>{55891BF6-8CFD-E400-500E-B8F286AA523A}</Project>
+      <Project>{5ECFEFC8-9BCA-6B3B-FD25-CA52F8298AE8}</Project>
       <Name>Unity.VisualScripting.Core.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{B88DA9AB-0E9D-86D2-95E9-45385D56651D}</Project>
+      <Project>{0DDB4B66-C371-02F0-A8D9-5116898ADBE7}</Project>
       <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="AK.Wwise.Unity.ProjectDatabase.csproj">
-      <Project>{10B65EFF-E99F-5D5D-E284-6CB098A303ED}</Project>
+      <Project>{C2045171-323B-AFE9-8BA6-5BE2AC064D98}</Project>
       <Name>AK.Wwise.Unity.ProjectDatabase</Name>
     </ProjectReference>
     <ProjectReference Include="AK.Wwise.Unity.API.csproj">
-      <Project>{C73E6D60-718F-A767-2F19-441E12B6B31F}</Project>
+      <Project>{89DFFAB4-6038-7FA6-E976-88303A633CB3}</Project>
       <Name>AK.Wwise.Unity.API</Name>
     </ProjectReference>
     <ProjectReference Include="AK.Wwise.Unity.Timeline.Editor.csproj">
-      <Project>{49AAD76B-F01B-D84F-66C6-CD458BE65DC7}</Project>
+      <Project>{9807AE73-0448-DDBF-B57D-54CD5BD09351}</Project>
       <Name>AK.Wwise.Unity.Timeline.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
-      <Project>{A5252FF2-0D33-E64B-E40C-F434C82275A5}</Project>
+      <Project>{10AD56F5-58C3-940D-7824-3823A208C701}</Project>
       <Name>Unity.VisualScripting.Flow</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj">
-      <Project>{931858E8-8897-A6C7-C05F-73B81E0F176C}</Project>
+      <Project>{95B280C4-3FAF-2778-5606-3E7F7DB38428}</Project>
       <Name>Unity.VisualScripting.Flow.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{0FA4F539-0DBB-B5C7-389C-02F48458C555}</Project>
+      <Project>{31AC665A-D635-D90D-3702-AC5EB98FA75C}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="AK.Wwise.Unity.MonoBehaviour.csproj">
-      <Project>{CE330A3F-0749-3CC9-7ACD-5BEC90948DB9}</Project>
+      <Project>{EAF79D66-C81F-B183-EC79-447DBA6380E5}</Project>
       <Name>AK.Wwise.Unity.MonoBehaviour</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{616D7DA6-0556-7488-8289-038302913D90}</Project>
+      <Project>{4990D69A-2D56-BC1A-8B1B-7DE5517F42A8}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.csproj">
-      <Project>{86687760-6CD6-1A63-EBC1-DBBDCA2852A2}</Project>
+      <Project>{010150ED-FB19-C54A-9693-8BD2BB5F53C2}</Project>
       <Name>Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection</Name>
     </ProjectReference>
     <ProjectReference Include="AK.Wwise.Unity.API.WwiseTypes.csproj">
-      <Project>{1D8C2E71-FDB9-B1F1-952C-55CB04981B84}</Project>
+      <Project>{6E9F77E4-3505-AEA4-A86C-24E49AA1735F}</Project>
       <Name>AK.Wwise.Unity.API.WwiseTypes</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj">
-      <Project>{8E433AF9-0ECB-75FB-882F-0D896AFB5852}</Project>
+      <Project>{2240820C-5126-EA0C-E9AA-2A0B20D9BE66}</Project>
       <Name>Unity.VisualScripting.SettingsProvider.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Performance.Profile-Analyzer.Editor.csproj">
-      <Project>{9EB9B73C-6CD7-8C89-1A3D-0EC5CA0DD624}</Project>
+      <Project>{55B28898-891E-163E-30A5-A251456E55CA}</Project>
       <Name>Unity.Performance.Profile-Analyzer.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.csproj">
-      <Project>{1B725EB9-E5A4-1473-72AF-5BEBF95E5DF4}</Project>
+      <Project>{0E7B6756-0F15-B791-A930-30E7EB04419A}</Project>
       <Name>Unity.TestTools.CodeCoverage.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.SysrootPackage.Editor.csproj">
-      <Project>{B536B6F7-8777-BAAB-CCB7-BBD02DB21E5F}</Project>
+      <Project>{C1A2C701-2710-006A-D35B-7749445DCAB1}</Project>
       <Name>Unity.SysrootPackage.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.csproj">
-      <Project>{4BECFB19-8FB6-05F9-0E10-09C079683EC9}</Project>
+      <Project>{2B7B40FF-4301-206C-696B-1F33F1B595FD}</Project>
       <Name>Unity.TestTools.CodeCoverage.Editor.OpenCover.Model</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
-      <Project>{DFD99D76-A5DE-498E-8A69-A735D61A6CB7}</Project>
+      <Project>{AB7C5B99-FDFE-6AD3-0609-14F024DAFD94}</Project>
       <Name>Unity.PlasticSCM.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.AI.Navigation.Updater.csproj">
-      <Project>{BB2ECA35-A72C-5CEC-23BB-8F0E282548FC}</Project>
+      <Project>{1459079F-1E57-A892-4BA7-21B5D4CEC298}</Project>
       <Name>Unity.AI.Navigation.Updater</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj">
-      <Project>{3DAF882A-B7BD-4585-0EB1-5707AE318E41}</Project>
+      <Project>{ACA36CB0-B6B3-F685-694E-FD50E5F878E0}</Project>
       <Name>Unity.VisualScripting.State.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Ak.Wwise.Api.WAAPI.csproj">
-      <Project>{20F481E7-8330-39CE-ED05-1E6C0E02FE5A}</Project>
+      <Project>{EF25844C-E0F5-4313-9884-4222624ED1E5}</Project>
       <Name>Ak.Wwise.Api.WAAPI</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{63788BCC-8C26-D480-86EA-37520AD8EA50}</Project>
+      <Project>{F8A71011-3F8A-4386-3D57-93E926D32F38}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{5552FBC1-D26C-DB7E-62D8-E12885FC3F12}</Project>
+      <Project>{3114FE64-C066-50AB-A855-2282C0B44E49}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.AI.Navigation.Editor.csproj">
-      <Project>{670B9BD9-B9B4-03CC-1C59-9BF9BFE87310}</Project>
+      <Project>{F32B7519-95D8-D374-91B2-98EF4C8F3A37}</Project>
       <Name>Unity.AI.Navigation.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VisualScripting.State.csproj">
-      <Project>{121C27AB-AB4F-0FCE-D388-E7D1D6A08419}</Project>
+      <Project>{1DD3AC68-35DA-1DF1-C2B4-2A7FC891ECB3}</Project>
       <Name>Unity.VisualScripting.State</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.AI.Navigation.Editor.ConversionSystem.csproj">
-      <Project>{76B1A8C2-B629-6B1F-2F5A-1F351B14BEEC}</Project>
+      <Project>{A8FC4772-5CD0-12FD-90B1-B890D94E4C68}</Project>
       <Name>Unity.AI.Navigation.Editor.ConversionSystem</Name>
     </ProjectReference>
     <ProjectReference Include="Cinemachine.csproj">
-      <Project>{E16C3FF3-C88E-3C12-D781-F58B91EE794C}</Project>
+      <Project>{33D3C5B8-1522-D37D-098D-C3FC756B095C}</Project>
       <Name>Cinemachine</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Toolchain.Win-x86_64-Linux-x86_64.csproj">
-      <Project>{49F02091-2D25-6E47-57CB-472A4DD418C7}</Project>
+      <Project>{119F4E5D-0B3C-D6E9-2F74-71DE84B895A5}</Project>
       <Name>Unity.Toolchain.Win-x86_64-Linux-x86_64</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.VSCode.Editor.csproj">
-      <Project>{835F7F60-A515-8D80-0584-4BF094727971}</Project>
+      <Project>{35944097-3387-4125-E609-181CB5E57454}</Project>
       <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
   </ItemGroup>
