@@ -7,15 +7,12 @@ public class PlayerControllerRB : MonoBehaviour
     [Header("References")]
     public Transform cameraTransform; // Reference to camera for movement direction
     public Transform model;           // Reference to player model for visual rotation
-    private DeathScreen DS;
 
     [Header("Movement")]
     public float walkSpeed = 4f;
     public float runSpeed = 8f;
     public float StandingSpeed = 2f;
-    public float jumpHeight = 1f;
-    private float jumpCooldown = 0.1f;
-    private float jumpTimer;
+    public float jumpHeight = 1.2f;
     public float turnSmoothTime = 0.1f;
     public float acceleration = 10f;
     private float gravity => Physics.gravity.y;
@@ -32,9 +29,7 @@ public class PlayerControllerRB : MonoBehaviour
     private Vector3 velocity;
     private float currentSpeed;
     private float turnSmoothVelocity;
-
-    private bool isDead = false;
-
+    
     [Header("Ground Check")]
     private bool isGrounded;
     public LayerMask groundLayer;
@@ -63,8 +58,6 @@ public class PlayerControllerRB : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         col = GetComponent<CapsuleCollider>();
 
-        DS = FindObjectOfType<DeathScreen>();
-
         // Start in Standing position and lying down
         model.localRotation = Quaternion.Euler(0f, 180f, 0f);
         col.height = StandingingHeight;
@@ -75,8 +68,6 @@ public class PlayerControllerRB : MonoBehaviour
 
     private void Update()
     {
-        jumpTimer += Time.deltaTime;
-        HandleGroundCheck();
         HandleInput();
         HandleJump();
 
@@ -86,7 +77,7 @@ public class PlayerControllerRB : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+        HandleGroundCheck();
         ApplyMovement();
     }
 
@@ -151,25 +142,26 @@ public class PlayerControllerRB : MonoBehaviour
 
     private void HandleJump()
     {
-        if (isGrounded && !isStanding && Input.GetKeyDown(KeyCode.Space) && jumpTimer >= jumpCooldown)
+        if (isGrounded && !isStanding && Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("Jump triggered");
             float jumpVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
             rb.velocity = new Vector3(rb.velocity.x, jumpVelocity, rb.velocity.z);
-            jumpTimer = 0f;
         }
     }
 
     private void HandleGroundCheck()
     {
-        // Raycast from the center of the capsule downward
-        Vector3 origin = transform.position + col.center;
-        float rayLength = (col.height / 2f) + 0.05f; // Slight buffer at the bottom
+        // Calculate the bottom point of the capsule
+        Vector3 bottom = transform.position + Vector3.up * 0.1f;
+        Vector3 top = bottom + Vector3.up * (col.height - col.radius * 2f);
 
-        isGrounded = Physics.Raycast(origin, Vector3.down, rayLength, groundLayer);
+        // Slightly shrink the radius to avoid false positives
+        float radius = col.radius * 0.95f;
 
-        // Debug ray to visualize ground detection
-        Debug.DrawRay(origin, Vector3.down * rayLength, isGrounded ? Color.green : Color.red);
+        isGrounded = Physics.CheckCapsule(top, bottom, radius, groundLayer, QueryTriggerInteraction.Ignore);
+
+        Debug.DrawLine(bottom, top, isGrounded ? Color.green : Color.red);
     }
 
 
@@ -233,6 +225,7 @@ public class PlayerControllerRB : MonoBehaviour
 
             float moveSpeed = animator.GetFloat("moveSpeed");
 
+            // If moveSpeed indicates movement and we're standing near a box
             if (moveSpeed > 0.05f)
             {
                 if (!isPushing)
@@ -261,24 +254,6 @@ public class PlayerControllerRB : MonoBehaviour
         }
     }
 
-    public void Die()
-    {
-        if (isDead) return;
-
-        isDead = true;
-        Debug.Log("Player has died.");
-
-        if (isDead == true)
-        {
-            Debug.Log("DS script entered");
-            DS.ShowDeathScreen();
-        }
-
-        animator.SetTrigger("die");
-        rb.velocity = Vector3.zero;
-        rb.isKinematic = true;
-        this.enabled = false;
-    }
 
     public void SavePlayer()
     {

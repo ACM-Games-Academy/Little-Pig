@@ -1,5 +1,6 @@
 using Cinemachine;
 using System.Collections;
+using UnityEditor.Overlays;
 using UnityEngine;
 
 public class DoorController : MonoBehaviour
@@ -11,6 +12,7 @@ public class DoorController : MonoBehaviour
     private bool hasAutoOpened = false;
     public CinemachineVirtualCamera virtualCam;
     public PlayerControllerRB player;
+    public GameObject cameraOverlay;
 
     public GameObject toEnable;
 
@@ -20,6 +22,7 @@ public class DoorController : MonoBehaviour
 
     public enum DoorOpenType { PressToOpen, AutoOpen }
     public DoorOpenType openType = DoorOpenType.PressToOpen;
+
 
     void Update()
     {
@@ -41,6 +44,7 @@ public class DoorController : MonoBehaviour
             }
         }
     }
+
 
     private void OnTriggerExit(Collider other)
     {
@@ -70,6 +74,9 @@ public class DoorController : MonoBehaviour
         if (toEnable != null)
             toEnable.SetActive(true);
 
+        if (openType == DoorOpenType.AutoOpen && cameraOverlay != null)
+            StartCoroutine(DisableOverlayAfterDelay());
+
         if (virtualCam != null)
         {
             CinemachineTransposer transposer = virtualCam.GetCinemachineComponent<CinemachineTransposer>();
@@ -80,6 +87,8 @@ public class DoorController : MonoBehaviour
             }
         }
     }
+
+
 
     public void CloseDoor()
     {
@@ -92,6 +101,13 @@ public class DoorController : MonoBehaviour
             rightDoorAnimator.SetTrigger(closeTriggerName);
 
         isOpen = false;
+    }
+
+    private IEnumerator DisableOverlayAfterDelay()
+    {
+        yield return new WaitForSeconds(0.70f);
+        if (cameraOverlay != null)
+            cameraOverlay.SetActive(false);
     }
 
     private IEnumerator AutoCloseAfterDelay()

@@ -12,15 +12,11 @@ public class EnemyAI : MonoBehaviour
 
     [Header("Chase")]
     public float chaseTimeout = 5f;
-    public float chaseSpeedMultiplier = 1.2f;
+    public float chaseSpeedMultiplier = 1.2f; // <-- New multiplier
 
     [Header("Patrol")]
     public Transform[] patrolPoints;
     public float patrolWaitTime = 2f;
-
-    [Header("Knife Pickup")]
-    public GameObject tableKnife;
-    public GameObject aiKnife;
 
     private NavMeshAgent agent;
     private int currentPatrolIndex = 0;
@@ -44,87 +40,61 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
-        // If doing an action animation, stop moving
-        bool doingAction = animator.GetBool("IsInspecting") || animator.GetBool("IsChopping") || animator.GetBool("IsSharp");
-        agent.isStopped = doingAction;
+        bool seesPlayer = CanSeePlayer();
+        float movementSpeed = agent.velocity.magnitude;
+        animator.SetFloat("Speed", movementSpeed);
 
-        if (!doingAction)
+        if (seesPlayer)
         {
-            bool seesPlayer = CanSeePlayer();
-            float movementSpeed = agent.velocity.magnitude;
-            animator.SetFloat("Speed", movementSpeed);
+            isChasing = true;
+            lastSeenTimer = 0f;
+            SetDestination(player.position);
+        }
+        else if (isChasing)
+        {
+            lastSeenTimer += Time.deltaTime;
 
-            if (seesPlayer)
+            if (lastSeenTimer < chaseTimeout)
             {
-                isChasing = true;
-                lastSeenTimer = 0f;
                 SetDestination(player.position);
             }
-            else if (isChasing)
+            else
             {
-                lastSeenTimer += Time.deltaTime;
-
-                if (lastSeenTimer < chaseTimeout)
-                {
-                    SetDestination(player.position);
-                }
-                else
-                {
-                    isChasing = false;
-                    SetDestination(patrolPoints[currentPatrolIndex].position);
-                }
-            }
-
-            // Patrolling
-            if (!isChasing && patrolPoints.Length > 0)
-            {
-                if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
-                {
-                    waitTimer += Time.deltaTime;
-                    if (waitTimer >= patrolWaitTime)
-                    {
-                        currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;
-                        SetDestination(patrolPoints[currentPatrolIndex].position);
-                        waitTimer = 0f;
-                    }
-                }
-            }
-
-            // Animation and speed
-            animator.SetBool("chasing", isChasing);
-            agent.speed = isChasing ? baseSpeed * chaseSpeedMultiplier : baseSpeed;
-
-            // Check for player caught
-            if (isChasing && Vector3.Distance(transform.position, player.position) < 1.2f)
-            {
-                playerController.Die();
+                isChasing = false;
+                SetDestination(patrolPoints[currentPatrolIndex].position);
             }
         }
-        else
+
+        // Patrolling
+        if (!isChasing && patrolPoints.Length > 0)
         {
-            // Stop movement animation while performing an action
-            animator.SetFloat("Speed", 0f);
+            if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
+            {
+                waitTimer += Time.deltaTime;
+                if (waitTimer >= patrolWaitTime)
+                {
+                    currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;
+                    SetDestination(patrolPoints[currentPatrolIndex].position);
+                    waitTimer = 0f;
+                }
+            }
         }
+
+        // Set animation and speed state
+        animator.SetBool("chasing", isChasing);
+        agent.speed = isChasing ? baseSpeed * chaseSpeedMultiplier : baseSpeed;
     }
 
     public void Alert(Vector3 position)
     {
-        CancelActions();
         isChasing = true;
         lastSeenTimer = 0f;
         SetDestination(position);
     }
 
-    void CancelActions()
-    {
-        animator.SetBool("IsInspecting", false);
-        animator.SetBool("IsChopping", false);
-        animator.SetBool("IsSharp", false);
-    }
-
     bool CanSeePlayer()
     {
-        if (!playerController.IsStanding()) return false;
+        if (!playerController.IsStanding()) return false; // Only see player WHEN standing
 
         Vector3 direction = (player.position - transform.position).normalized;
         float distance = Vector3.Distance(transform.position, player.position);
@@ -150,50 +120,5 @@ public class EnemyAI : MonoBehaviour
     {
         if (agent.enabled && agent.isOnNavMesh)
             agent.SetDestination(destination);
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Inspect"))
-        {
-            animator.SetBool("IsInspecting", true);
-        }
-        else if (other.CompareTag("Chop"))
-        {
-            animator.SetBool("IsChopping", true);
-
-            // Knife swap: Pick up the knife from the table
-            if (tableKnife != null) tableKnife.SetActive(false);
-            if (aiKnife != null) aiKnife.SetActive(true);
-        }
-        else if (other.CompareTag("Sharpen"))
-        {
-            animator.SetBool("IsSharp", true);
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        // These are no longer needed to stop the action;
-        // animations now control when the bools reset.
-    }
-
-    public void OnInspectFinished()
-    {
-        animator.SetBool("IsInspecting", false);
-    }
-
-    public void OnChopFinished()
-    {
-        animator.SetBool("IsChopping", false);
-
-        // Knife swap: Return knife to table
-        if (tableKnife != null) tableKnife.SetActive(true);
-        if (aiKnife != null) aiKnife.SetActive(false);
-    }
-
-    public void OnSharpenFinished()
-    {
-        animator.SetBool("IsSharp", false);
     }
 }
