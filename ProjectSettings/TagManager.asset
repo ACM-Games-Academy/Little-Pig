@@ -9,6 +9,9 @@ TagManager:
   - Button
   - Poster
   - Poster 2
+  - Inspect
+  - Chop
+  - Sharpen
   layers:
   - Default
   - TransparentFX

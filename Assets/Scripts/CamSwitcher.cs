@@ -6,6 +6,9 @@ public class CamSwitcher : MonoBehaviour
     public GameObject cameraObjectToEnable;
     public GameObject cameraObjectToDisable;
 
+    [Header("Overlay")]
+    public GameObject cameraOverlay;
+
     private bool hasSwitched = false;
 
     private void OnTriggerEnter(Collider other)
@@ -17,6 +20,9 @@ public class CamSwitcher : MonoBehaviour
 
             if (cameraObjectToDisable != null)
                 cameraObjectToDisable.SetActive(false);
+
+            if (cameraOverlay != null)
+                cameraOverlay.SetActive(false);
 
             hasSwitched = true;
         }
