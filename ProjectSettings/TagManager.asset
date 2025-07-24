@@ -7,6 +7,14 @@ TagManager:
   - Door
   - PushBox
   - Button
+<<<<<<< HEAD
+=======
+  - Poster
+  - Poster 2
+  - Inspect
+  - Chop
+  - Sharpen
+>>>>>>> main
   layers:
   - Default
   - TransparentFX

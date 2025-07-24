@@ -12,7 +12,9 @@ public class PlayerControllerRB : MonoBehaviour
     public float walkSpeed = 4f;
     public float runSpeed = 8f;
     public float StandingSpeed = 2f;
-    public float jumpHeight = 1.2f;
+    public float jumpHeight = 1f;
+    private float jumpCooldown = 0.1f;
+    private float jumpTimer;
     public float turnSmoothTime = 0.1f;
     public float acceleration = 10f;
     private float gravity => Physics.gravity.y;
@@ -68,6 +70,8 @@ public class PlayerControllerRB : MonoBehaviour
 
     private void Update()
     {
+        jumpTimer += Time.deltaTime;
+        HandleGroundCheck();
         HandleInput();
         HandleJump();
 
@@ -77,7 +81,7 @@ public class PlayerControllerRB : MonoBehaviour
 
     private void FixedUpdate()
     {
-        HandleGroundCheck();
+        
         ApplyMovement();
     }
 
@@ -142,26 +146,25 @@ public class PlayerControllerRB : MonoBehaviour
 
     private void HandleJump()
     {
-        if (isGrounded && !isStanding && Input.GetKeyDown(KeyCode.Space))
+        if (isGrounded && !isStanding && Input.GetKeyDown(KeyCode.Space) && jumpTimer >= jumpCooldown)
         {
             Debug.Log("Jump triggered");
             float jumpVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
             rb.velocity = new Vector3(rb.velocity.x, jumpVelocity, rb.velocity.z);
+            jumpTimer = 0f;
         }
     }
 
     private void HandleGroundCheck()
     {
-        // Calculate the bottom point of the capsule
-        Vector3 bottom = transform.position + Vector3.up * 0.1f;
-        Vector3 top = bottom + Vector3.up * (col.height - col.radius * 2f);
+        // Raycast from the center of the capsule downward
+        Vector3 origin = transform.position + col.center;
+        float rayLength = (col.height / 2f) + 0.05f; // Slight buffer at the bottom
 
-        // Slightly shrink the radius to avoid false positives
-        float radius = col.radius * 0.95f;
+        isGrounded = Physics.Raycast(origin, Vector3.down, rayLength, groundLayer);
 
-        isGrounded = Physics.CheckCapsule(top, bottom, radius, groundLayer, QueryTriggerInteraction.Ignore);
-
-        Debug.DrawLine(bottom, top, isGrounded ? Color.green : Color.red);
+        // Debug ray to visualize ground detection
+        Debug.DrawRay(origin, Vector3.down * rayLength, isGrounded ? Color.green : Color.red);
     }
 
 
