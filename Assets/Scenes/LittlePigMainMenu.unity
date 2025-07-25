@@ -1448,7 +1448,9 @@ MonoBehaviour:
     Left Control - Toggle standing
 
     E
-    - Interact'
+    - Interact
+
+    Space Bar - Jump'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1ccb339e9bfd6e14bb5e2ff64eda536f, type: 2}
   m_sharedMaterial: {fileID: 4896274379404417640, guid: 1ccb339e9bfd6e14bb5e2ff64eda536f, type: 2}
