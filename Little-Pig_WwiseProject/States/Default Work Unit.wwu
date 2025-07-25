@@ -10,6 +10,16 @@
 						<State Name="MusicOff" ID="{EEB19023-6752-4236-865E-9948D1566C62}"/>
 					</ChildrenList>
 				</StateGroup>
+				<StateGroup Name="Sound" ID="{33CB979F-4A65-4E30-829C-34B8A613B466}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.5"/>
+					</PropertyList>
+					<ChildrenList>
+						<State Name="None" ID="{FB5EFA8D-88BF-4124-B334-DFD2050B74C7}"/>
+						<State Name="SoundOn" ID="{A2627EEB-E3B3-4449-A7D1-9F4E7F0A61BF}"/>
+						<State Name="SoundOff" ID="{F12D6827-D9D5-4128-B357-8CC746C7BF5B}"/>
+					</ChildrenList>
+				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</States>

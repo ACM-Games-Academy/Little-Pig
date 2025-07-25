@@ -1,22 +1,40 @@
 Event	ID	Name			Wwise Object Path	Notes
+	352231959	Play_Ending_Music			\Default Work Unit\Play_Ending_Music	
 	443088484	Play_Sliding			\Default Work Unit\Play_Sliding	
 	463827929	Play_Ambient_Noise			\Default Work Unit\Play_Ambient_Noise	
+	1338915374	Play_Piggy_Footsteps			\Default Work Unit\Play_Piggy_Footsteps	
 	1425874556	Play_Knife_Inspect			\Default Work Unit\Play_Knife_Inspect	
 	1502672598	Play_Chopping_SFX			\Default Work Unit\Play_Chopping_SFX	
 	1917263390	StopMusic			\Default Work Unit\StopMusic	
 	2521765307	Play_Butcher_Footsteps			\Default Work Unit\Play_Butcher_Footsteps	
+	2547633870	Play_Door			\Default Work Unit\Play_Door	
 	3591821967	Play_Whetstone			\Default Work Unit\Play_Whetstone	
 
+State Group	ID	Name			Wwise Object Path	Notes
+	623086306	Sound			\Default Work Unit\Sound	
+
+State	ID	Name	State Group			Notes
+	748895195	None	Sound			
+	1380610801	SoundOff	Sound			
+	2961669477	SoundOn	Sound			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	45122956	Shoe Step Stone Soft E	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\3A\{3A943F85-9B09-5FBF-7F1A-AE88DFB3992C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Piggy\Piggy Footsteps\Shoe Step Stone Soft E		7808
+	150610154	Shoe Step Stone Soft D	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\64\{64097C2D-E090-5CA0-AE8B-C9C267C2931A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Piggy\Piggy Footsteps\Shoe Step Stone Soft D		8391
+	156540197	Shoe Step Stone Soft A	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\79\{790D172A-052A-CB4A-362E-71D2838B293E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Piggy\Piggy Footsteps\Shoe Step Stone Soft A		8145
 	295477461	Shoe Step Stone Hard B	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\8F\{8F2905C2-952F-9774-9904-EFDB419D84E9}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Butcher Footsteps\Shoe Step Stone Hard B		4484
-	442653690	Swing Down	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\33\{33CD9949-E961-7408-A1BF-560E0EEFD5E2}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chopping Animation\Swing Down		2719
-	447177132	Sliding	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\BB\{BB393DF3-9A8D-29CF-A9AF-62AF42452E7E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chopping Animation\Sliding		14074
+	442653690	Swing Down	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\AE\{AEF2D880-6E35-266C-DE67-56064725F525}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chopping Animation\Swing Down		2719
+	447177132	Sliding	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\B6\{B62E8816-3A77-EC4D-D2CF-8FCDC19BD6D6}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chopping Animation\Sliding		14074
 	459069376	Shoe Step Stone Hard E	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\9D\{9D6D9A3C-F233-49DF-7BCF-E2831C826D78}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Butcher Footsteps\Shoe Step Stone Hard E		4457
 	496403479	Shoe Step Stone Hard C	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\41\{41E7D538-18B0-D409-C3ED-59191204EC0A}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Butcher Footsteps\Shoe Step Stone Hard C		4333
-	625651025	Ambient Noise	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\AC\{AC74C723-3A2A-221B-93AB-5E6FA867AB06}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient Noise		1025358
+	599703584	Shoe Step Stone Soft B	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\4C\{4C8263AC-E0B0-36E9-862F-63947AFDB86E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Piggy\Piggy Footsteps\Shoe Step Stone Soft B		7860
+	625651025	Ambient Noise	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\A2\{A226EE80-83B2-A943-653D-685C2B8B2239}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient Noise		1025358
 	635096154	Shoe Step Stone Hard A	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\F9\{F9E4645B-8788-C08E-7929-EC9142B0B61D}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Butcher Footsteps\Shoe Step Stone Hard A		4335
-	666881249	Chopping SFX	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\8A\{8AE82466-2311-2C6E-C9DE-083337A805EC}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chopping Animation\Chopping SFX		18260
-	717998526	Whetstone	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\0D\{0D2DB05F-F79B-F002-9AC6-ADBA55BE3FAC}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Whetstone		103692
+	666881249	Chopping SFX	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\0C\{0CB71D17-EACB-91AA-D74D-2AADB7E5B775}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chopping Animation\Chopping SFX		18260
+	694756337	Ending_Music	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\B6\{B6DF643C-BE0E-F20D-8933-3798B622B106}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ending_Music		916728
+	717998526	Whetstone	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\BA\{BA0D3B52-6B8A-832C-0B3B-C2DEB095ACEB}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Whetstone		103692
 	881930790	Shoe Step Stone Hard D	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\AF\{AF89C9F1-65DE-30C4-4E8C-DAD8B8D31929}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Butcher Footsteps\Shoe Step Stone Hard D		4322
-	1000150231	Knife Inspect	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\0D\{0D91AFDE-2439-90F8-760F-9964FA1AEB5E}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Knife Inspect		11321
+	1000150231	Knife Inspect	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\C7\{C71B4F83-EFF2-3B73-B22B-6DCCF7D217F3}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Knife Inspect		11321
+	1043545567	Door	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\1E\{1E4456C7-0FB7-0DE4-A1DA-514D7A33A93C}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Door		38472
+	1052627752	Shoe Step Stone Soft C	C:\Users\ACM Student\Documents\Github\Little-Pig\Little-Pig_WwiseProject\.cache\C2\{C2687C56-C45B-AA54-A286-53879DADA740}.wem		\Actor-Mixer Hierarchy\Default Work Unit\Piggy\Piggy Footsteps\Shoe Step Stone Soft C		7291
 

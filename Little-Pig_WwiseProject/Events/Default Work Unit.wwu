@@ -115,6 +115,50 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Door" ID="{4473F01A-A3F3-4C41-A5A7-F54F0E8BC482}">
+					<ChildrenList>
+						<Action Name="" ID="{70309F49-F47B-4770-AA8F-BCED8CBAD571}" ShortID="266092438">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Door" ID="{8F726736-D79C-4CDE-AA0B-F9914A4DDDC6}" WorkUnitID="{80981E41-B77B-4C19-AD5D-ADFB6BDFDBDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Piggy_Footsteps" ID="{CAE2F775-6722-45CD-8E2A-75CA17B8F357}">
+					<ChildrenList>
+						<Action Name="" ID="{EABEBB41-2C9D-45CD-939C-23707927456E}" ShortID="105569165">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Piggy Footsteps" ID="{C8767D98-B981-47F6-ACB6-180965BE8C75}" WorkUnitID="{80981E41-B77B-4C19-AD5D-ADFB6BDFDBDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Piggy_Pushing" ID="{32B0E274-233C-48CB-9A57-E33688E7AAC2}">
+					<ChildrenList>
+						<Action Name="" ID="{78D0231E-7ABA-4192-84C5-47E6E7CDD757}" ShortID="338491358">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Piggy Pushing" ID="{A88BBD77-274C-4F62-8E73-545C8E3D228E}" WorkUnitID="{80981E41-B77B-4C19-AD5D-ADFB6BDFDBDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Ending_Music" ID="{1CC06B6B-FC09-4270-A94D-6B2DC5F0D0C6}">
+					<ChildrenList>
+						<Action Name="" ID="{C4FCC427-A64F-4465-8457-94FE2954A31B}" ShortID="549964681">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ending_Music" ID="{4D9CB57D-6B86-4386-8852-93883CBCB354}" WorkUnitID="{80981E41-B77B-4C19-AD5D-ADFB6BDFDBDE}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

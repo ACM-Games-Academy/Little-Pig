@@ -83,7 +83,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: f9a5336fcaf1eb4297506d21fe2c434a
     GuidInternal: 
-    m_lastTime: -8584482344401973778
+    m_lastTime: -8584481637435958793
     List:
     - name: Main
       guid: 613f651c0bdb7647a1bcda9b3a486481
@@ -125,7 +125,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 8cb419b80e5ce5428ca0b91195b92079
     GuidInternal: 
-    m_lastTime: -8584482350044236155
+    m_lastTime: -8584481637435994232
     List:
     - name: Play_Ambient_Music_FIN
       guid: 3e9b99b91669d2479aaace5a55a91e3f
@@ -195,6 +195,40 @@ MonoBehaviour:
       maxAttenuation: 20
       maxDuration: 1.4659457
       minDuration: 1.4659457
+    - name: Play_Door
+      guid: 1af07344f3a3414ca5a7f54f0e8bc482
+      id: 2547633870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8cb419b80e5ce5428ca0b91195b92079
+      - ElementName: Play_Door
+        ObjectType: 3
+        guid: 1af07344f3a3414ca5a7f54f0e8bc482
+      Path: Events\Default Work Unit\Play_Door
+      maxAttenuation: 0
+      maxDuration: 2.2462916
+      minDuration: 2.2462916
+    - name: Play_Ending_Music
+      guid: 6b6bc01c09fc7042a94d6b2dc5f0d0c6
+      id: 352231959
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8cb419b80e5ce5428ca0b91195b92079
+      - ElementName: Play_Ending_Music
+        ObjectType: 3
+        guid: 6b6bc01c09fc7042a94d6b2dc5f0d0c6
+      Path: Events\Default Work Unit\Play_Ending_Music
+      maxAttenuation: 0
+      maxDuration: 53.40739
+      minDuration: 53.40739
     - name: Play_Knife_Inspect
       guid: 57a989c8b273354da28c9f9cd23cb49a
       id: 1425874556
@@ -212,6 +246,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.3767287
       minDuration: 1.3767287
+    - name: Play_Piggy_Footsteps
+      guid: 75f7e2ca2267cd458e2a75ca17b8f357
+      id: 1338915374
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8cb419b80e5ce5428ca0b91195b92079
+      - ElementName: Play_Piggy_Footsteps
+        ObjectType: 3
+        guid: 75f7e2ca2267cd458e2a75ca17b8f357
+      Path: Events\Default Work Unit\Play_Piggy_Footsteps
+      maxAttenuation: 0
+      maxDuration: 0.74303854
+      minDuration: 0.74303854
+    - name: Play_Piggy_Pushing
+      guid: 74e2b0323c23cb489a57e33688e7aac2
+      id: 954272327
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 8cb419b80e5ce5428ca0b91195b92079
+      - ElementName: Play_Piggy_Pushing
+        ObjectType: 3
+        guid: 74e2b0323c23cb489a57e33688e7aac2
+      Path: Events\Default Work Unit\Play_Piggy_Pushing
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Sliding
       guid: cfe0a9f5238f4144adba78be5c9f3c4f
       id: 443088484
@@ -306,7 +374,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 17a1edbb0203974e942321637f12eafc
     GuidInternal: 
-    m_lastTime: -8584482344401917686
+    m_lastTime: -8584481642020654227
     List:
     - name: Music
       guid: 0833c2559d777c44b371c82ca300abcf
@@ -374,6 +442,72 @@ MonoBehaviour:
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []
+    - name: Sound
+      guid: 9f97cb33654a304e829c34b8a613b466
+      id: 623086306
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 17a1edbb0203974e942321637f12eafc
+      - ElementName: Sound
+        ObjectType: 9
+        guid: 9f97cb33654a304e829c34b8a613b466
+      Path: States\Default Work Unit\Sound
+      values:
+      - name: None
+        guid: 8dfa5efbbf882441b334dfd2050b74c7
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 17a1edbb0203974e942321637f12eafc
+        - ElementName: Sound
+          ObjectType: 9
+          guid: 9f97cb33654a304e829c34b8a613b466
+        - ElementName: None
+          ObjectType: 8
+          guid: 8dfa5efbbf882441b334dfd2050b74c7
+      - name: SoundOff
+        guid: 27682df1d5d92841b3578cc746c7bf5b
+        id: 1380610801
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 17a1edbb0203974e942321637f12eafc
+        - ElementName: Sound
+          ObjectType: 9
+          guid: 9f97cb33654a304e829c34b8a613b466
+        - ElementName: SoundOff
+          ObjectType: 8
+          guid: 27682df1d5d92841b3578cc746c7bf5b
+      - name: SoundOn
+        guid: eb7e62a2b3e34944a7d19f4e7f0a61bf
+        id: 2961669477
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 17a1edbb0203974e942321637f12eafc
+        - ElementName: Sound
+          ObjectType: 9
+          guid: 9f97cb33654a304e829c34b8a613b466
+        - ElementName: SoundOn
+          ObjectType: 8
+          guid: eb7e62a2b3e34944a7d19f4e7f0a61bf
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -403,7 +537,7 @@ MonoBehaviour:
     m_lastTime: -8584482576882294997
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 050000000600000007000000090000000a0000000c0000000d000000110000001200000020000000ec000000ed0000003c0100003d0100001302000014020000
+  ExpandedWaapiItemIds: 050000000600000007000000090000000a0000000c0000000d000000110000001200000014000000150000001700000020000000bf000000c0000000ec000000ed0000003c0100003d0100001302000014020000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

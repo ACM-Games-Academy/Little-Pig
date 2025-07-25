@@ -9,6 +9,7 @@ public class CharacterSounds : MonoBehaviour
     public AK.Wwise.Event Sliding;
     public AK.Wwise.Event Whetstone;
     public AK.Wwise.Event Inspect;
+    public AK.Wwise.Event PigWalk;
     // Start is called before the first frame update
 
     public void PlayFootsteps()
@@ -35,4 +36,10 @@ public class CharacterSounds : MonoBehaviour
     {
         Inspect.Post(gameObject);
     }
+
+    public void PlayPigWalk()
+    {
+        PigWalk.Post(gameObject);
+    }
+
 }

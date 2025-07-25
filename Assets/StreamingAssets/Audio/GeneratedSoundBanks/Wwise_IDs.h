@@ -17,7 +17,10 @@ namespace AK
         static const AkUniqueID PLAY_AMBIENT_NOISE = 463827929U;
         static const AkUniqueID PLAY_BUTCHER_FOOTSTEPS = 2521765307U;
         static const AkUniqueID PLAY_CHOPPING_SFX = 1502672598U;
+        static const AkUniqueID PLAY_DOOR = 2547633870U;
+        static const AkUniqueID PLAY_ENDING_MUSIC = 352231959U;
         static const AkUniqueID PLAY_KNIFE_INSPECT = 1425874556U;
+        static const AkUniqueID PLAY_PIGGY_FOOTSTEPS = 1338915374U;
         static const AkUniqueID PLAY_SLIDING = 443088484U;
         static const AkUniqueID PLAY_WHETSTONE = 3591821967U;
         static const AkUniqueID STOPMUSIC = 1917263390U;
@@ -36,6 +39,18 @@ namespace AK
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
         } // namespace MUSIC
+
+        namespace SOUND
+        {
+            static const AkUniqueID GROUP = 623086306U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID SOUNDOFF = 1380610801U;
+                static const AkUniqueID SOUNDON = 2961669477U;
+            } // namespace STATE
+        } // namespace SOUND
 
     } // namespace STATES
 

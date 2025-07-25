@@ -1,7 +1,11 @@
 State Group	ID	Name			Wwise Object Path	Notes
+	623086306	Sound			\Default Work Unit\Sound	
 	3991942870	Music			\Default Work Unit\Music	
 
 State	ID	Name	State Group			Notes
+	748895195	None	Sound			
+	1380610801	SoundOff	Sound			
+	2961669477	SoundOn	Sound			
 	748895195	None	Music			
 	3207097637	MusicOff	Music			
 	3998479257	MusicOn	Music			

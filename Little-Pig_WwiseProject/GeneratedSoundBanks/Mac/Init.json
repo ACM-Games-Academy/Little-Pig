@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{244CBCA9-0404-56FB-DD5E-E8D1A7C26D4C}",
+    "Hash": "{2E2E43A7-A017-DB52-6CFC-F3F43C48AC44}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -69,6 +69,32 @@
     ],
     "StateGroups": [
      {
+      "Id": "623086306",
+      "Name": "Sound",
+      "ObjectPath": "\\States\\Default Work Unit\\Sound",
+      "GUID": "{33CB979F-4A65-4E30-829C-34B8A613B466}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Sound\\None",
+        "GUID": "{FB5EFA8D-88BF-4124-B334-DFD2050B74C7}"
+       },
+       {
+        "Id": "1380610801",
+        "Name": "SoundOff",
+        "ObjectPath": "\\States\\Default Work Unit\\Sound\\SoundOff",
+        "GUID": "{F12D6827-D9D5-4128-B357-8CC746C7BF5B}"
+       },
+       {
+        "Id": "2961669477",
+        "Name": "SoundOn",
+        "ObjectPath": "\\States\\Default Work Unit\\Sound\\SoundOn",
+        "GUID": "{A2627EEB-E3B3-4449-A7D1-9F4E7F0A61BF}"
+       }
+      ]
+     },
+     {
       "Id": "3991942870",
       "Name": "Music",
       "ObjectPath": "\\States\\Default Work Unit\\Music",
@@ -97,6 +123,6 @@
     ]
    }
   ],
-  "FileHash": "{925EC3FE-54E0-A656-1A74-745099F20AF6}"
+  "FileHash": "{FDEB0583-4220-4F82-757E-CC63ADCA9B43}"
  }
 }

@@ -10,11 +10,35 @@
     "Type": "User",
     "GUID": "{1C653F61-DB0B-4776-A1BC-DA9B3A486481}",
     "Language": "SFX",
-    "Hash": "{AC020178-8EB2-0CC0-D856-2A73911ED252}",
+    "Hash": "{00267017-DE47-24B7-3116-FD0EEDE145AE}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
     "Media": [
+     {
+      "Id": "45122956",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shoe Step Stone Soft E.wav",
+      "CachePath": "C7/{C70F8C42-0A88-FBF5-40B8-C33D3BF58CB6}.wem"
+     },
+     {
+      "Id": "150610154",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shoe Step Stone Soft D.wav",
+      "CachePath": "29/{29421967-9B71-8CBC-0E9F-78A6B69D7469}.wem"
+     },
+     {
+      "Id": "156540197",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shoe Step Stone Soft A.wav",
+      "CachePath": "39/{395463BB-8540-F4FD-7ADC-C8AF0D1770E3}.wem"
+     },
      {
       "Id": "295477461",
       "Language": "SFX",
@@ -29,7 +53,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Ukulele whoosh.wav",
-      "CachePath": "F3/{F35283C8-58BA-DE77-761F-2FC0C817E364}.wem"
+      "CachePath": "06/{06E83DA2-FDF9-C691-F4A2-BCBEA89728CD}.wem"
      },
      {
       "Id": "447177132",
@@ -37,7 +61,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "FOLYProp_Duffle Bag Slide_PSE_BW-BD3HL_OuPDd.wav",
-      "CachePath": "AD/{ADA34423-762B-C64F-8EE5-0EB3D93FB722}.wem"
+      "CachePath": "99/{9941D5C2-736F-3306-816C-FA8E2A2C8533}.wem"
      },
      {
       "Id": "459069376",
@@ -56,12 +80,20 @@
       "CachePath": "FD/{FD1F9217-EE11-EA2D-E2D4-EABB2989B2A8}.wem"
      },
      {
+      "Id": "599703584",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shoe Step Stone Soft B.wav",
+      "CachePath": "DB/{DBEFF65B-1E4E-8A05-713E-EB3583EFC2C9}.wem"
+     },
+     {
       "Id": "625651025",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Ambient Noise.wav",
-      "CachePath": "C3/{C3E178D7-9BEA-7823-C947-6504D4211CDF}.wem"
+      "CachePath": "57/{57980E98-59CF-7D0B-C29E-1FB86F1D605F}.wem"
      },
      {
       "Id": "635096154",
@@ -77,7 +109,15 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Chopping SFX.wav",
-      "CachePath": "1B/{1B6E4661-7166-0FAB-239C-BAC04F3A15D7}.wem"
+      "CachePath": "61/{610E555C-8970-947A-DB60-0672E298C2BE}.wem"
+     },
+     {
+      "Id": "694756337",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Ending_Music.wav",
+      "CachePath": "77/{77B740EA-2F75-8003-8A5F-56DAABBD394B}.wem"
      },
      {
       "Id": "717998526",
@@ -85,7 +125,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "grindstone.wav",
-      "CachePath": "C4/{C44EC664-DF18-779F-207A-AE21744CDF4C}.wem"
+      "CachePath": "C6/{C6752B04-586D-563C-8ADD-7CE76C9CFB64}.wem"
      },
      {
       "Id": "881930790",
@@ -101,7 +141,23 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "knife_slashing.wav",
-      "CachePath": "0D/{0D832347-B80B-D2F0-E7D9-F2B35BA2D007}.wem"
+      "CachePath": "D8/{D8171BF4-3BE9-5220-9947-FC859DF5AA8E}.wem"
+     },
+     {
+      "Id": "1043545567",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "squeaky door hinge open and close.wav",
+      "CachePath": "50/{505DE932-E9D6-C15C-DCAD-8AC458772384}.wem"
+     },
+     {
+      "Id": "1052627752",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Shoe Step Stone Soft C.wav",
+      "CachePath": "4C/{4C9D74DA-82F4-130B-9A1B-EDF2DDB1A7E7}.wem"
      }
     ],
     "Events": [
@@ -179,6 +235,34 @@
       ]
      },
      {
+      "Id": "2547633870",
+      "Name": "Play_Door",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Door",
+      "GUID": "{4473F01A-A3F3-4C41-A5A7-F54F0E8BC482}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.2462916",
+      "DurationMax": "2.2462916",
+      "MediaRefs": [
+       {
+        "Id": "1043545567"
+       }
+      ]
+     },
+     {
+      "Id": "352231959",
+      "Name": "Play_Ending_Music",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Ending_Music",
+      "GUID": "{1CC06B6B-FC09-4270-A94D-6B2DC5F0D0C6}",
+      "DurationType": "OneShot",
+      "DurationMin": "53.40739",
+      "DurationMax": "53.40739",
+      "MediaRefs": [
+       {
+        "Id": "694756337"
+       }
+      ]
+     },
+     {
       "Id": "1425874556",
       "Name": "Play_Knife_Inspect",
       "ObjectPath": "\\Events\\Default Work Unit\\Play_Knife_Inspect",
@@ -189,6 +273,32 @@
       "MediaRefs": [
        {
         "Id": "1000150231"
+       }
+      ]
+     },
+     {
+      "Id": "1338915374",
+      "Name": "Play_Piggy_Footsteps",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Piggy_Footsteps",
+      "GUID": "{CAE2F775-6722-45CD-8E2A-75CA17B8F357}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.74303854",
+      "DurationMax": "0.74303854",
+      "MediaRefs": [
+       {
+        "Id": "45122956"
+       },
+       {
+        "Id": "150610154"
+       },
+       {
+        "Id": "156540197"
+       },
+       {
+        "Id": "599703584"
+       },
+       {
+        "Id": "1052627752"
        }
       ]
      },
@@ -234,6 +344,6 @@
     ]
    }
   ],
-  "FileHash": "{9E39EED6-DAD7-F725-8B93-AAD76D8BA8AC}"
+  "FileHash": "{B1BA881F-66C3-A897-1B2A-39E8AFD62919}"
  }
 }
