@@ -56,6 +56,8 @@ public class EnemyAI : MonoBehaviour
 
             if (seesPlayer)
             {
+                CancelActions();
+
                 isChasing = true;
                 lastSeenTimer = 0f;
                 SetDestination(player.position);
@@ -170,12 +172,6 @@ public class EnemyAI : MonoBehaviour
         {
             animator.SetBool("IsSharp", true);
         }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        // These are no longer needed to stop the action;
-        // animations now control when the bools reset.
     }
 
     public void OnInspectFinished()
