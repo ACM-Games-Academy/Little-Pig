@@ -7153,7 +7153,7 @@ MonoBehaviour:
   videoCanvas: {fileID: 1480218170}
   videoDisplay: {fileID: 1486756928}
   videoPlayer: {fileID: 1486756930}
-  victoryVideo: {fileID: 32900000, guid: f14417e74611d5e4e9d4677589dad1c3, type: 3}
+  victoryVideo: {fileID: 32900000, guid: 0478569c92fef054997a05b89688f9d0, type: 3}
   playerTag: Player
 --- !u!65 &555859546
 BoxCollider:
@@ -7346,7 +7346,8 @@ MonoBehaviour:
   MultiPositionType: 1
   multiPositionTypeLabel: 0
   attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
-  LargeModePositions: []
+  LargeModePositions:
+  - {fileID: 0}
   multiPositionArray: []
 --- !u!1 &568495215
 GameObject:
