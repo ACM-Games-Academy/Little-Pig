@@ -29358,7 +29358,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   player: {fileID: 1686391666}
-  enemyAI: {fileID: 0}
+  enemyAI: {fileID: 1184798590}
   playerController: {fileID: 1686391669}
 --- !u!33 &7217449712438916155
 MeshFilter:
