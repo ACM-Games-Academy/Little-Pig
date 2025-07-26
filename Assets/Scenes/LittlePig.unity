@@ -2017,6 +2017,7 @@ MonoBehaviour:
   closeTriggerName: Close
   virtualCam: {fileID: 0}
   player: {fileID: 0}
+  cameraOverlay: {fileID: 0}
   toEnable: {fileID: 0}
   openType: 1
 --- !u!1 &161311626
@@ -6157,7 +6158,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraObjectToEnable: {fileID: 963194225}
   cameraObjectToDisable: {fileID: 1982369740}
-  cameraOverlay: {fileID: 0}
 --- !u!65 &484395140
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8043,7 +8043,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraObjectToEnable: {fileID: 1982369740}
   cameraObjectToDisable: {fileID: 963194225}
-  cameraOverlay: {fileID: 1812543559}
 --- !u!65 &601793425
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9459,6 +9458,7 @@ MonoBehaviour:
   closeTriggerName: Close
   virtualCam: {fileID: 609586445}
   player: {fileID: 1686391669}
+  cameraOverlay: {fileID: 0}
   toEnable: {fileID: 1184798585}
   openType: 0
 --- !u!1 &730898674 stripped
@@ -19981,6 +19981,7 @@ MonoBehaviour:
   closeTriggerName: Close
   virtualCam: {fileID: 0}
   player: {fileID: 0}
+  cameraOverlay: {fileID: 1812543559}
   toEnable: {fileID: 0}
   openType: 1
 --- !u!65 &1567504625
