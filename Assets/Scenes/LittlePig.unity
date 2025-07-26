@@ -9992,7 +9992,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786325473}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d402f1cead235ec4d84be827d6a948f1, type: 3}
   m_Name: 
@@ -30749,7 +30749,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   player: {fileID: 1686391666}
-  enemyAI: {fileID: 0}
+  enemyAI: {fileID: 1184798590}
   playerController: {fileID: 1686391669}
 --- !u!33 &7217449712438916155
 MeshFilter:
