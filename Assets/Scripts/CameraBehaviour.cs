@@ -63,7 +63,10 @@ public class CameraBehaviour : MonoBehaviour
 
     void CheckVision()
     {
-        if (playerController.IsStanding()) return;
+        if (playerController.IsStanding()) 
+        {
+            return;
+        }
 
         Vector3 direction = (player.position - transform.position).normalized;
         float distance = Vector3.Distance(transform.position, player.position);
@@ -113,6 +116,7 @@ public class CameraBehaviour : MonoBehaviour
 
         // Add the trigger logic script to new gameobject
         VisionTrigger triggerScript = triggerObj.AddComponent<VisionTrigger>();
+        triggerScript.playerController = playerController;
         triggerScript.player = player;
         triggerScript.enemyAI = enemyAI;
         triggerScript.visionMask = visionMask;
