@@ -9,11 +9,11 @@ public class DeathScreen : MonoBehaviour
     [SerializeField] private GameObject deathPanel;
     [SerializeField] private Button restartButton;
     [SerializeField] private Button quitButton;
-    [SerializeField] private TMP_Text deathPhraseText; // Use TMP_Text for TextMeshPro
+    [SerializeField] private TMP_Text deathPhraseText;
 
     [Header("Death Phrases")]
     [TextArea]
-    [SerializeField] private string[] deathPhrases; // This is the missing declaration
+    [SerializeField] private string[] deathPhrases;
 
     private void Awake()
     {
