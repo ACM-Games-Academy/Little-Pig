@@ -70,7 +70,7 @@ public class MenuController : MonoBehaviour
         }
 
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("LittlePig"); // Change if needed
+        SceneManager.LoadScene("LittlePig");
     }
 
     public void Controls()
