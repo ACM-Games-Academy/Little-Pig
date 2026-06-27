@@ -9,8 +9,8 @@ You play as a small pig navigating an unsettling building, using stealth and puz
 ## Mechanics
 
 - Move on all fours for speed, stand on two legs to push objects, and interact with the environment
-- Environmental puzzles — crate pushing and button pressing
-- Stealth mechanic - cameras can't spot you on two legs, but the butcher can't see you on four. Switch stances to avoid whatever's watching.
+- Environmental puzzles: crate pushing and button pressing
+- Stealth mechanic: cameras can't spot you on two legs, but the butcher can't see you on four. Switch stances to avoid whatever's watching.
 
 ---
 
