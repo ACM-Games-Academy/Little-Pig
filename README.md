@@ -29,6 +29,10 @@ Make sure Git LFS is installed before cloning if the repo contains large assets.
 <img src="Screenshots/Butcher%20interacting%20with%20pigs.png" width="80%"> <img src="Screenshots/Butcher%20butchering.png" width="80%"> <img src="Screenshots/Butcher%20table.png" width="80%">
 <img src="Screenshots/poster%201.png" width="30%"> <img src="Screenshots/poster%202.png" width="80%"> <img src="Screenshots/poster%20notifcation%20and%203rd%20area.png" width="80%">
 
+## Video
+
+[![Little Pig - Prototype 2025-07-01]](https://youtu.be/6vkkJ_Emr1U)
+
 ## Team
 
 - Programming: Jared Fisher
