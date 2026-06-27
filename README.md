@@ -26,10 +26,10 @@ Make sure Git LFS is installed before cloning if the repo contains large assets.
 
 ## Team
 
-Programming | Jared Fisher
-Art         | William Whitehead
-Design      | Loretta Lok and Megan Brooker 
-Audio       | Chris Matoe and Dylan Gatfield
+- Programming: Jared Fisher
+- Art: William Whitehead
+- Design: Loretta Lok and Megan Brooker 
+- Audio: Chris Matoe and Dylan Gatfield
 
 
 Project management is handled through Trello. This is an academic project.
