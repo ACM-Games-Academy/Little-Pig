@@ -1,6 +1,6 @@
 # Little Pig
 
-A third-person atmospheric puzzle game made in Unity, developed as part of a university group project. Inspired by *Little Nightmares*.
+A third-person atmospheric horror puzzle game developed in Unity as part of a university group project and inspired by *Little Nightmares*.
 
 You play as a small pig navigating an unsettling building, using stealth and puzzle-solving to get through it.
 
