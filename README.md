@@ -23,6 +23,18 @@ You play as a small pig navigating an unsettling building, using stealth and puz
 Make sure Git LFS is installed before cloning if the repo contains large assets.
 
 ---
+## Screenshots
+
+![](Screenshots/prototype%20main%20menu.png)
+![](Screenshots/in-game%20starting%20area.png)
+![](Screenshots/Pushing%20box.png)
+![](Screenshots/Butcher%20interacting%20with%20pigs.png)
+![](Screenshots/Butcher%20butchering.png)
+![](Screenshots/Butcher%20table.png)
+![](Screenshots/poster%201.png)
+![](Screenshots/poster%202.png)
+![](Screenshots/poster%20notifcation%20and%203rd%20area.png)
+---
 
 ## Team
 
