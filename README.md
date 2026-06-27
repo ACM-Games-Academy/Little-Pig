@@ -25,18 +25,9 @@ Make sure Git LFS is installed before cloning if the repo contains large assets.
 ---
 ## Screenshots
 
-<div style="column-count:2; column-gap:8px;">
-  <img src="Screenshots/prototype%20main%20menu.png" style="width:100%; margin-bottom:8px;">
-  <img src="Screenshots/in-game%20starting%20area.png" style="width:100%; margin-bottom:8px;">
-  <img src="Screenshots/Pushing%20box.png" style="width:100%; margin-bottom:8px;">
-  <img src="Screenshots/Butcher%20interacting%20with%20pigs.png" style="width:100%; margin-bottom:8px;">
-  <img src="Screenshots/Butcher%20butchering.png" style="width:100%; margin-bottom:8px;">
-  <img src="Screenshots/Butcher%20table.png" style="width:100%; margin-bottom:8px;">
-  <img src="Screenshots/poster%201.png" style="width:100%; margin-bottom:8px;">
-  <img src="Screenshots/poster%202.png" style="width:100%; margin-bottom:8px;">
-  <img src="Screenshots/poster%20notifcation%20and%203rd%20area.png" style="width:100%; margin-bottom:8px;">
-</div>
----
+<img src="Screenshots/prototype%20main%20menu.png" width="30%"> <img src="Screenshots/in-game%20starting%20area.png" width="30%"> <img src="Screenshots/Pushing%20box.png" width="30%">
+<img src="Screenshots/Butcher%20interacting%20with%20pigs.png" width="30%"> <img src="Screenshots/Butcher%20butchering.png" width="30%"> <img src="Screenshots/Butcher%20table.png" width="30%">
+<img src="Screenshots/poster%201.png" width="30%"> <img src="Screenshots/poster%202.png" width="30%"> <img src="Screenshots/poster%20notifcation%20and%203rd%20area.png" width="30%">
 
 ## Team
 
