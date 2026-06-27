@@ -25,15 +25,13 @@ Make sure Git LFS is installed before cloning if the repo contains large assets.
 ---
 ## Screenshots
 
-![](Screenshots/prototype%20main%20menu.png)
-![](Screenshots/in-game%20starting%20area.png)
-![](Screenshots/Pushing%20box.png)
-![](Screenshots/Butcher%20interacting%20with%20pigs.png)
-![](Screenshots/Butcher%20butchering.png)
-![](Screenshots/Butcher%20table.png)
-![](Screenshots/poster%201.png)
-![](Screenshots/poster%202.png)
-![](Screenshots/poster%20notifcation%20and%203rd%20area.png)
+## Screenshots
+
+<img src="Screenshots/prototype%20main%20menu.png" width="49%"> <img src="Screenshots/in-game%20starting%20area.png" width="49%">
+<img src="Screenshots/Pushing%20box.png" width="49%"> <img src="Screenshots/Butcher%20interacting%20with%20pigs.png" width="49%">
+<img src="Screenshots/Butcher%20butchering.png" width="49%"> <img src="Screenshots/Butcher%20table.png" width="49%">
+<img src="Screenshots/poster%201.png" width="49%"> <img src="Screenshots/poster%202.png" width="49%">
+<img src="Screenshots/poster%20notifcation%20and%203rd%20area.png" width="49%">
 ---
 
 ## Team
