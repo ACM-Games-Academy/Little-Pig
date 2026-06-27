@@ -20,7 +20,7 @@ You play as a small pig navigating an unsettling building, using stealth and puz
 2. Open the folder in Unity Hub (Unity 2022.3.47f1)
 3. Open the main scene from `Assets/Scenes/` and hit Play
 
-Make sure Git LFS is installed before cloning if the repo contains large assets.
+Make sure Git LFS is installed before cloning
 
 ---
 ## Screenshots
@@ -31,10 +31,11 @@ Make sure Git LFS is installed before cloning if the repo contains large assets.
 
 ## Team
 
-- Programming: Jared Fisher
-- Art: William Whitehead
-- Design: Loretta Lok and Megan Brooker 
-- Audio: Chris Matoe and Dylan Gatfield
-
+| Role | Name |
+|---|---|
+| Programming | Jared Fisher |
+| Art | William Whitehead |
+| Design | Loretta Lok, Megan Brooker |
+| Audio | Chris Matoe, Dylan Gatfield |
 
 Project management is handled through Trello. This is an academic project.
